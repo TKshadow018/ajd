@@ -1,0 +1,134 @@
+/* Default theme (Ocean Blue) - no data-theme attribute needed */
+:root {
+  --primary-color: #4b6cb7;
+  --secondary-color: #182848;
+  --accent-color: #4b6cb7;
+  --background-white: #ffffff;
+  --background-light: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #666;
+  --border-color: #e0e0e0;
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.15);
+  /* Cursor colors for default theme */
+  --cursor-color-1: #4b6cb7; /* primary */
+  --cursor-color-2: #182848; /* secondary */
+}
+
+/* Warm Sunset Theme */
+[data-theme="sunset"] {
+  --primary-color: #ff6b6b;
+  --secondary-color: #ee5a24;
+  --accent-color: #ff6b6b;
+  --background-white: #fff5f5;
+  --background-light: #ffe5e5;
+  --text-primary: #2d1f1f;
+  --text-secondary: #6b4444;
+  --cursor-color-1: #ff6b6b;
+  --cursor-color-2: #ee5a24;
+}
+
+/* Forest Green Theme */
+[data-theme="forest"] {
+  --primary-color: #00b894;
+  --secondary-color: #00a085;
+  --accent-color: #00b894;
+  --background-white: #f0fdf7;
+  --background-light: #e0faf1;
+  --text-primary: #1f3d2f;
+  --text-secondary: #4a6f5a;
+  --cursor-color-1: #00b894;
+  --cursor-color-2: #00a085;
+}
+
+/* Purple Night Theme */
+[data-theme="night"] {
+  --primary-color: #5f27cd;
+  --secondary-color: #341f97;
+  --accent-color: #5f27cd;
+  --background-white: #f5f3ff;
+  --background-light: #ebe5ff;
+  --text-primary: #2d1f4f;
+  --text-secondary: #5a4578;
+  --cursor-color-1: #5f27cd;
+  --cursor-color-2: #341f97;
+}
+
+/* Deep Ocean Theme */
+[data-theme="ocean"] {
+  --primary-color: #0077be;
+  --secondary-color: #004c8c;
+  --accent-color: #0077be;
+  --background-white: #f0f8ff;
+  --background-light: #e3f2fd;
+  --text-primary: #1a2f42;
+  --text-secondary: #4a6277;
+  --cursor-color-1: #0077be;
+  --cursor-color-2: #004c8c;
+}
+
+/* Rose Gold Theme */
+[data-theme="rose"] {
+  --primary-color: #e84393;
+  --secondary-color: #c44569;
+  --accent-color: #e84393;
+  --background-white: #fff5f9;
+  --background-light: #ffe5f1;
+  --text-primary: #3d1f2f;
+  --text-secondary: #7a4a5f;
+  --cursor-color-1: #e84393;
+  --cursor-color-2: #c44569;
+}
+
+/* Autumn Leaves Theme */
+[data-theme="autumn"] {
+  --primary-color: #d63031;
+  --secondary-color: #74b9ff;
+  --accent-color: #d63031;
+  --background-white: #fff8f5;
+  --background-light: #ffe8e0;
+  --text-primary: #3d1f1f;
+  --text-secondary: #6b4444;
+  --cursor-color-1: #d63031;
+  --cursor-color-2: #74b9ff;
+}
+
+/* Fresh Mint Theme */
+[data-theme="mint"] {
+  --primary-color: #00b894;
+  --secondary-color: #55efc4;
+  --accent-color: #00b894;
+  --background-white: #f0fff9;
+  --background-light: #e0fff4;
+  --text-primary: #1f3d35;
+  --text-secondary: #4a7a6a;
+  --cursor-color-1: #00b894;
+  --cursor-color-2: #55efc4;
+}
+
+/* Monochrome Theme */
+[data-theme="mono"] {
+  --primary-color: #2d3436;
+  --secondary-color: #636e72;
+  --accent-color: #2d3436;
+  --background-white: #ffffff;
+  --background-light: #f5f5f5;
+  --text-primary: #2d3436;
+  --text-secondary: #636e72;
+  --cursor-color-1: #2d3436;
+  --cursor-color-2: #636e72;
+}
+
+/* Huff Puff Theme */
+[data-theme="huff-puff"] {
+  --primary-color: #ffeaa7;
+  --secondary-color: #fdcb6e;
+  --accent-color: #fdcb6e;
+  --background-white: #fffef5;
+  --background-light: #fff9e5;
+  --text-primary: #3d3520;
+  --text-secondary: #7a6a45;
+  --cursor-color-1: #ffeaa7;
+  --cursor-color-2: #fdcb6e;
+}

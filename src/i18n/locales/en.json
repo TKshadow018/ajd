@@ -1,0 +1,402 @@
+{
+  "nav": {
+    "brand": "AJD NGANJ",
+    "tagline": "Self-reliant Economy, Prosperity through Good Governance",
+    "home": "Home",
+    "about": "About Us",
+    "manifesto": "Manifesto",
+    "joinUs": "Join Us",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Building a Better Tomorrow",
+      "subtitle": "Together We Rise, United We Prosper",
+      "description": "AJD NGANJ is committed to bringing transformative change through transparency, accountability, and people-centric governance. Join us in our mission to create a nation where every voice matters.",
+      "joinMovement": "Join Our Movement",
+      "learnMore": "Learn More"
+    },
+    "stats": {
+      "members": "Active Members",
+      "projects": "Community Projects",
+      "approval": "Approval Rating"
+    },
+    "vision": {
+      "title": "Our Vision for Progress",
+      "description": "We envision a society where opportunity is not a privilege but a right. Where education, healthcare, and economic prosperity are accessible to all. Where corruption is eliminated and meritocracy prevails.",
+      "point1": "Quality education for every child",
+      "point2": "Universal healthcare coverage",
+      "point3": "Economic opportunities for all citizens",
+      "point4": "Environmental sustainability",
+      "point5": "Transparent and accountable governance",
+      "readVision": "Read Our Full Vision"
+    },
+    "updates": {
+      "title": "Latest Updates",
+      "date1": "Dec 5, 2025",
+      "title1": "Town Hall Success",
+      "desc1": "Our recent town hall meeting saw unprecedented participation with over 2,000 attendees discussing local development priorities.",
+      "date2": "Dec 3, 2025",
+      "title2": "Youth Initiative Launch",
+      "desc2": "Launching a comprehensive program to engage young minds in policy-making and governance processes.",
+      "date3": "Dec 1, 2025",
+      "title3": "Community Outreach",
+      "desc3": "Our volunteers distributed essential supplies to 500 families affected by recent natural disasters.",
+      "readMore": "Read More"
+    },
+    "cta": {
+      "title": "Ready to Make a Difference?",
+      "description": "Join thousands of citizens working together for a better future",
+      "button": "Become a Member Today"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About AJD NGANJ",
+      "subtitle": "A Political Movement Built on Trust, Integrity, and Service"
+    },
+    "story": {
+      "title": "Our Story",
+      "para1": "Founded in 2020, AJD NGANJ emerged from a grassroots movement of concerned citizens who believed that politics should serve the people, not special interests. What started as community gatherings in local halls has grown into a nationwide political force representing millions of voices.",
+      "para2": "Our journey has been marked by unwavering commitment to democratic principles, transparent governance, and the belief that every citizen deserves a voice in shaping their nation's future. We've challenged the status quo and proven that people-powered politics can create real change."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To build a nation where every citizen has equal opportunities to prosper, where governance is transparent and accountable, and where the collective good always takes precedence over individual interests. We envision a society driven by justice, equality, and sustainable progress."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower citizens through inclusive political participation, implement policies that address real-world challenges, and create a government that truly represents and serves all people. We are committed to fighting corruption, promoting education, and ensuring economic opportunities for all."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "integrity": "Integrity",
+      "integrityDesc": "We maintain the highest standards of honesty and ethical conduct in all our actions. Transparency isn't just a promise—it's our foundation.",
+      "accountability": "Accountability",
+      "accountabilityDesc": "We are answerable to our commitments and to the people we serve.",
+      "inclusivity": "Inclusivity",
+      "inclusivityDesc": "Every voice matters, regardless of background, religion, or economic status. We celebrate diversity and ensure everyone has a seat at the table.",
+      "innovation": "Innovation",
+      "innovationDesc": "We embrace progressive ideas and modern solutions to age-old problems, always looking forward to build a better tomorrow."
+    },
+    "leadership": {
+      "title": "Our Leadership",
+      "centralTitle": "Central Leadership",
+      "narayanganjTitle": "Narayanganj Leadership",
+      "leader1": {
+        "name": "Mia Moshiuzzaman",
+        "position": "President",
+        "bio": "The current Convenor of Aamjanata Dol is Colonel (Retd.) Mia Mashiuzzaman. He contested the first party election for the post of President and secured a landslide victory. He was elected President by receiving a total of 95 votes. His sole defeated rival was Mr. Mohammad Shoikot, who managed to receive only 3 votes. This huge margin of victory proves his strong acceptance and leadership capability within the party. He is currently leading the party as its Convenor.",
+        "votes": 95,
+        "opponent": "Muhammad Soikat: 3",
+        "image": "/face/mia.png"
+      },
+      "leader2": {
+        "name": "Tarek Rahman",
+        "position": "General Secretary",
+        "bio": "The current General Secretary of Aamjanata Dol is Tarek Rahman. He is a well-known political figure in various popular movements across the country. He contested the first party election for General Secretary and won by a large margin. In that election, he was elected after receiving 93 votes. His sole defeated rival was Mohammad Mostofa, who received only 5 votes. He is currently managing the party's important organizational activities.",
+        "votes": 93,
+        "opponent": "Mohammad Mostafa: 5",
+        "image": "/face/tarek.png"
+      },
+      "leader3": {
+        "name": "Jonab Arif Billah",
+        "position": "Organizational Secretary",
+        "bio": "Organizational Secretary of Amjonatar Dal. He was defeated in the first election for this post. In that election, Faysal Ahmed was elected as the Organizational Secretary with 60 votes. The defeated candidates were Arif Billah (who received 34 votes) and Dr. Anamul Hoque (who received 4 votes). Subsequently, when the elected Organizational Secretary Faysal Ahmed left the party, Arif Billah was appointed as the new Organizational Secretary.",
+        "votes": 60,
+        "opponent": "Arif Billah: 34; Dr. Anamul Huq: 4",
+        "image": "/face/arif.png"
+      },
+      "narayanganj": {
+        "leader1": {
+          "name": "Unelected (till now)",
+          "position": "Unelected (till now)",
+          "bio": "Narayanganj leadership is unelected till now.",
+          "image": ""
+        },
+        "leader2": {
+          "name": "Unelected (till now)",
+          "position": "Unelected (till now)",
+          "bio": "Narayanganj leadership is unelected till now.",
+          "image": ""
+        },
+        "leader3": {
+          "name": "Unelected (till now)",
+          "position": "Unelected (till now)",
+          "bio": "Narayanganj leadership is unelected till now.",
+          "image": ""
+        }
+      }
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "showInfographic": "Show as Image",
+      "hideInfographic": "Hide Image",
+      "event1": {
+        "year": "February 17, 2018",
+        "title": "Launch of Quota Reform Movement",
+        "description": "Formation of \"Bangladesh General Students' Rights Protection Council\". Beginning of the political journey from its internal practical activities."
+      },
+      "event2": {
+        "year": "October 26, 2021",
+        "title": "Establishment of Gano Odhikar Parishad",
+        "description": "Establishment of Gano Odhikar Parishad (GOP) under the leadership of economist Dr. Reza Kibria and Nurul Haque Nur."
+      },
+      "event3": {
+        "year": "June 2023",
+        "title": "Ideological Differences and Division",
+        "description": "Internal crisis in the party due to allegations of financial irregularities and secret contacts with Israeli intelligence agency (Mossad) against financial transparency and general secretary. Taking firm decisions without compromising on the question of principles in the national interest."
+      },
+      "event4": {
+        "year": "July-August 2024",
+        "title": "Active Participation in Mass Uprising",
+        "description": "Leaders and activists of Aamjanatar Dol on the streets as front-line fighters in the student-public mass uprising. 7 martyred and hundreds of workers injured to bring down fascism."
+      },
+      "event5": {
+        "year": "September 2, 2024",
+        "title": "Cancellation of Gano Odhikar Parishad Registration",
+        "description": "Announcement of cancellation of registration of \"Gano Odhikar Parishad\" established under the leadership of Colonel (Retd.) Mia Mashiuzzaman by the new democratic government."
+      },
+      "event6": {
+        "year": "January 28, 2025",
+        "title": "Establishment of Aamjanatar Dal",
+        "description": "Appearance as a new political party named \"Aamjanatar Dal\" under the leadership of Colonel (Retd.) Mia Mashiuzzaman, Tarek Rahman and Farooq Hasan."
+      },
+      "event7": {
+        "year": "December 9, 2025",
+        "title": "Struggle for Registration",
+        "description": "Secretary Tarek Rahman's continuous 134-hour hunger strike demanding party registration with the Election Commission. Principled registration achieved by proving strong organizational structure at district and upazila levels across the country."
+      },
+      "event8": {
+        "year": "Our Symbol",
+        "title": "Election Symbol: Butterfly",
+        "description": "\"Butterfly\"—symbol of transformation, freedom and a new dawn. A symbol of our commitment to building an equitable Bangladesh."
+      }
+    },
+    "navigation": {
+      "timeline": "Journey",
+      "principles": "Principles",
+      "pillars": "Program",
+      "leadership": "Leadership"
+    },
+    "cta": {
+      "title": "Be Part of the Change",
+      "description": "Join thousands of citizens working together to build a better nation"
+    }
+  },
+  "manifesto": {
+    "hero": {
+      "title": "Our Manifesto",
+      "subtitle": "A Blueprint for Progress, Prosperity, and People-Centered Governance"
+    },
+    "intro": {
+      "title": "Our Commitment to You",
+      "para1": "This manifesto represents more than political promises—it's a sacred contract between AJD NGANJ and the people we serve. Every policy outlined here has been developed through extensive consultation with citizens, experts, and community leaders across our nation.",
+      "para2": "We believe in evidence-based policymaking, sustainable development, and inclusive growth. Our vision is clear: to build a nation where opportunity is universal, where justice is blind, and where every citizen can achieve their full potential."
+    },
+    "principles": {
+      "title": "Core Principles of Amjonatar Dal",
+      "subtitle": "The core principles of Amjonatar Dal are Sovereignty, Self-reliance, and Good Governance. These three principles will guide the structure and objectives of Amjonatar Dal. The following explanations are defined in support of the three principles:",
+      "sovereignty": {
+        "title": "1. Sovereignty",
+        "description": "Bangladesh's sovereignty means our country's independence and our ability to make our own decisions. It ensures that we will not allow foreign interference in our internal and external affairs and that our country will be governed according to our own laws and policies. By pledging to protect sovereignty, we will protect our beloved motherland from political, economic, cultural, military and social aggression."
+      },
+      "selfReliance": {
+        "title": "2. Self-reliance",
+        "description": "We will strive to achieve self-reliance through our own resources and capabilities in Bangladesh's economic and social development. Our strong efforts will be on creating employment for the people of the country, developing local industries and increasing the ability to compete in the international market."
+      },
+      "goodGovernance": {
+        "title": "3. Good Governance",
+        "description": "We will fight to establish good governance through transparency, accountability and justice in running the government. Through establishing good governance, we will ensure that all activities of the state are being conducted for the welfare of the people and the rights of all levels of people are being protected."
+      }
+    },
+    "pillars": {
+      "title": "Our 10-Point Program",
+      "education": {
+        "title": "Education for All",
+        "point1": "Free quality education from primary to university level",
+        "point2": "Modernization of curriculum to meet global standards",
+        "point3": "Scholarship programs for underprivileged students",
+        "point4": "Investment in teacher training and development",
+        "point5": "Digital infrastructure in all schools"
+      },
+      "healthcare": {
+        "title": "Universal Healthcare",
+        "point1": "Free healthcare services for all citizens",
+        "point2": "Expansion of medical facilities in rural areas",
+        "point3": "Investment in medical research and innovation",
+        "point4": "Mental health awareness and support programs",
+        "point5": "Preventive healthcare initiatives"
+      },
+      "economy": {
+        "title": "Economic Growth",
+        "point1": "Job creation through infrastructure development",
+        "point2": "Support for small and medium enterprises",
+        "point3": "Foreign investment in sustainable industries",
+        "point4": "Skills development and vocational training",
+        "point5": "Minimum wage reform and workers' rights"
+      },
+      "environment": {
+        "title": "Environmental Sustainability",
+        "point1": "Transition to renewable energy sources",
+        "point2": "Reforestation and biodiversity conservation",
+        "point3": "Strict environmental regulations for industries",
+        "point4": "Waste management and recycling programs",
+        "point5": "Climate change mitigation strategies"
+      },
+      "justice": {
+        "title": "Justice & Equality",
+        "point1": "Independent and efficient judicial system",
+        "point2": "Anti-corruption measures and transparency",
+        "point3": "Equal rights regardless of gender, religion, or ethnicity",
+        "point4": "Police reform and community safety",
+        "point5": "Legal aid for marginalized communities"
+      },
+      "security": {
+        "title": "National Security",
+        "point1": "Modern defense infrastructure and technology",
+        "point2": "Cybersecurity and digital protection",
+        "point3": "Border security and immigration reform",
+        "point4": "Counter-terrorism initiatives",
+        "point5": "Veteran support and welfare programs"
+      },
+      "gender": {
+        "title": "7. Ensuring Dignity and Security for All Genders",
+        "point1": "Safe work environment for women, maternity and family-friendly policies",
+        "point2": "Rights consistent with religious and social values",
+        "point3": "Effective laws to prevent violence against women and children",
+        "point4": "Respect for men's social and paternal responsibilities and rights",
+        "point5": "Dignity and security for all genders"
+      },
+      "defense": {
+        "title": "8. National Preparedness in Defense, Security & Civic Awareness",
+        "point1": "Defense system under complete national control",
+        "point2": "Building forces with advanced training, technology and morale",
+        "point3": "Mandatory brief military education for all adult citizens",
+        "point4": "Active participation in disaster response, security and national crisis",
+        "point5": "Citizen preparedness in national defense"
+      },
+      "health": {
+        "title": "9. Universal Healthcare, Environmental Protection & Fundamental Rights",
+        "point1": "Quality and accessible healthcare for all citizens",
+        "point2": "Food, medical care, housing, clean water and sanitation as fundamental rights",
+        "point3": "Effective environmental policies to prevent climate change, deforestation, river encroachment",
+        "point4": "Effective measures to prevent air and noise pollution",
+        "point5": "State's active responsibility in protecting environment and fundamental rights"
+      },
+      "anticorruption": {
+        "title": "10. Zero Tolerance Against Corruption, Drugs, Vice Culture & Crime",
+        "point1": "Effective measures against state and political corruption",
+        "point2": "Influence-free investigation and accountable justice system",
+        "point3": "Prevention of drugs, pornography and socially degrading cultural aggression",
+        "point4": "Integrated strategy of law, culture and education",
+        "point5": "Corruption-free, drug-free Bangladesh"
+      }
+    },
+    "timeline": {
+      "title": "Implementation Roadmap",
+      "phase1": {
+        "title": "First 100 Days",
+        "description": "Establish anti-corruption task force, launch free education initiative, and begin healthcare infrastructure assessment."
+      },
+      "phase2": {
+        "title": "First Year",
+        "description": "Implement minimum wage reform, launch renewable energy projects, and establish community healthcare centers."
+      },
+      "phase3": {
+        "title": "Years 2-3",
+        "description": "Complete infrastructure modernization, achieve universal healthcare coverage, and reach 50% renewable energy target."
+      },
+      "phase4": {
+        "title": "Years 4-5",
+        "description": "Consolidate reforms, evaluate impact, and prepare for next phase of development based on outcomes and citizen feedback."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How will these initiatives be funded?",
+      "a1": "Our funding strategy combines progressive taxation, efficient resource allocation, public-private partnerships, and elimination of wasteful spending. We've conducted comprehensive fiscal analysis ensuring all programs are financially sustainable without increasing the deficit.",
+      "q2": "What makes this manifesto different?",
+      "a2": "Unlike traditional manifestos, ours includes specific timelines, measurable targets, and accountability mechanisms. We've committed to quarterly progress reports and independent audits to ensure transparency and track our performance.",
+      "q3": "How can citizens participate in implementation?",
+      "a3": "We believe in participatory governance. Citizens can join policy committees, attend town halls, provide feedback through digital platforms, and volunteer for community initiatives. Every voice matters in shaping our collective future.",
+      "q4": "What about rural and marginalized communities?",
+      "a4": "Special focus is given to bridging the urban-rural divide. We've allocated 40% of development funds specifically for rural areas and marginalized communities, ensuring equitable growth and opportunity for all citizens."
+    },
+    "cta": {
+      "title": "This is Your Manifesto Too",
+      "description": "Download the full document, share your feedback, and join us in building a better tomorrow"
+    }
+  },
+  "join": {
+    "hero": {
+      "title": "Join Amjonatar Dal",
+      "subtitle": "Be part of the movement for sovereignty, self-reliance and good governance"
+    },
+    "form": {
+      "title": "Membership Form",
+      "successTitle": "Thank You!",
+      "successMessage": "Your application has been submitted successfully. We will contact you soon.",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "age": "Age",
+      "agePlaceholder": "Your age",
+      "gender": "Gender",
+      "genderSelect": "Select gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "photo": "Photo",
+      "photoHelp": "Upload a recent passport-sized photo (optional)",
+      "profession": "Profession",
+      "professionPlaceholder": "Enter your profession",
+      "email": "Email",
+      "emailPlaceholder": "Your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your phone number",
+      "politicalActivity": "Previous Political Activity",
+      "politicalActivityPlaceholder": "Describe any previous political involvement...",
+      "politicalActivityHelp": "Mention if you have been involved with any political party or organization",
+      "about": "Write a few lines about yourself",
+      "aboutPlaceholder": "Tell us about yourself, your goals, and why you want to join this party...",
+      "characters": "characters",
+      "youthWingLabel": "Join Youth Wing (নওজোয়ান)",
+      "youthWingHelp": "Eligible for members under 30.",
+      "errors": {
+        "nameRequired": "Name is required",
+        "ageMin": "Age must be 18 or above",
+        "genderRequired": "Gender is required",
+        "professionRequired": "Profession is required",
+        "emailInvalid": "Valid email is required",
+        "phoneInvalid": "Valid phone number is required",
+        "aboutMin": "Please write at least 50 characters about yourself",
+        "agreePhilosophyRequired": "You must agree with party philosophy"
+      },
+      "agreePhilosophy": "I agree with and am committed to working for Amjonatar Dal's core principles (Sovereignty, Self-reliance, and Good Governance)",
+      "submit": "Submit Application"
+    }
+  },
+  "footer": {
+    "tagline": "Self-reliant Economy, Prosperity through Good Governance",
+    "description": "Amjonatar Dal is committed to building a prosperous Bangladesh through sovereignty, self-reliance and good governance. Join us in the struggle to build our nation.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About Us",
+    "manifesto": "10-Point Program",
+    "news": "News & Updates",
+    "events": "Events",
+    "contact": "Contact",
+    "getInvolved": "Get Involved",
+    "volunteer": "Volunteer",
+    "donate": "Donate",
+    "membership": "Membership",
+    "campaigns": "Campaigns",
+    "contactUs": "Contact Us",
+    "address": "Central Office, Lift-5, Pritom Zaman Tower, 37/2, Purana Paltan, Dhaka-1000",
+    "phone": "01725545950, 01740310371, 01991155873",
+    "email": "amjanatardoloffice@gmail.com",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

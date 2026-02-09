@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { THEMES, applyTheme, getSavedTheme } from '../utils';
 import './ThemeSelector.css';
 
 const ThemeSelector = () => {
@@ -6,41 +7,19 @@ const ThemeSelector = () => {
 
   useEffect(() => {
     // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem('theme') || 'default';
+    const savedTheme = getSavedTheme();
     setCurrentTheme(savedTheme);
     applyTheme(savedTheme);
   }, []);
-
-  const applyTheme = (theme) => {
-    if (theme === 'default') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', theme);
-    }
-    localStorage.setItem('theme', theme);
-  };
 
   const handleThemeChange = (theme) => {
     setCurrentTheme(theme);
     applyTheme(theme);
   };
 
-  const themes = [
-    { id: 'default', name: 'Ocean Blue', class: 'default' },
-    { id: 'sunset', name: 'Warm Sunset', class: 'sunset' },
-    { id: 'forest', name: 'Forest Green', class: 'forest' },
-    { id: 'night', name: 'Purple Night', class: 'night' },
-    { id: 'ocean', name: 'Deep Ocean', class: 'ocean' },
-    { id: 'rose', name: 'Rose Gold', class: 'rose' },
-    { id: 'autumn', name: 'Autumn Leaves', class: 'autumn' },
-    { id: 'mint', name: 'Fresh Mint', class: 'mint' },
-    { id: 'mono', name: 'Monochrome', class: 'mono' },
-    { id: 'huff-puff', name: 'Huff Puff', class: 'huff-puff' }
-  ];
-
   return (
     <div className="theme-selector">
-      {themes.map((theme) => (
+      {THEMES.map((theme) => (
         <button
           key={theme.id}
           className={`theme-btn ${theme.class} ${currentTheme === theme.id ? 'active' : ''}`}

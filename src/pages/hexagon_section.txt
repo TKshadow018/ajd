@@ -1,0 +1,44 @@
+          <motion.div 
+            className="profile-hero-content"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="profile-image-container">
+              <div className="profile-image-hexagon">
+                <img
+                  src="/profile-butterfly.jpg"
+                  alt="মোঃ তারেক রহমান - প्रजाপতি प्रतीक"
+                  onError={e => { e.target.onerror = null; e.target.src = './face/tarek.png'; }}
+                />
+              </div>
+              <div className="butterfly-badge">प्रजाПती प्रतीक</div>
+            </div>
+
+            <div className="profile-info-section">
+              <h2 className="profile-name">মোঃ তারেক রহমান</h2>
+              <p className="profile-tagline">আমজনতার দল - ঢাকা-१२ আসনের प्रार्थী</p>
+              
+              <div className="profile-highlights">
+                <div className="highlight-card">
+                  <div className="highlight-label">पार्टี</div>
+                  <div className="highlight-value">আমজনतার দল</div>
+                </div>
+                <div className="highlight-divider"></div>
+                <div className="highlight-card">
+                  <div className="highlight-label">আসন</div>
+                  <div className="highlight-value">ঢাকা-१२</div>
+                </div>
+                <div className="highlight-divider"></div>
+                <div className="highlight-card">
+                  <div className="highlight-label">प्रतीक</div>
+                  <div className="highlight-value">प्रजापতি</div>
+                </div>
+              </div>
+
+              <div className="profile-description">
+                <h3>আমার যাত्रा</h3>
+                <p>আমি २०१६ সাল पर्यन्त একজন आईটি ব्यবসায়ী ছिलাम और बর्तमानে आm o मधु ব्यবसার साथे جড়ित। আমার राजनैतिक यात्रा शुरु होय २०१८ सalে कোटा संsकar आंدoлنে माधyме। सeई संgram থেके শुरु করе आज पर্yन्त आmি गणतांत्रिक मूल্yबoध एvм जnগণের अधिकार आदায়ের जন्y निरlsvाभাvе काय করे याछि।</p>
+              </div>
+            </div>
+          </motion.div>

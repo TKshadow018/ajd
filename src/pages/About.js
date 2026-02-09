@@ -19,46 +19,37 @@ import {
 } from 'react-icons/fa';
 import { GiButterfly } from 'react-icons/gi';
 import { useTranslation } from 'react-i18next';
+import { useScrollSpy } from '../hooks';
 import './About.css';
+
+// Section IDs for scroll spy
+const SECTION_IDS = ['timeline', 'principles', 'pillars', 'leadership'];
 
 const About = () => {
   const { t } = useTranslation();
-  const [activeSection, setActiveSection] = useState('hero');
+  const { activeSection, scrollToSection } = useScrollSpy(SECTION_IDS);
   const [showInfographic, setShowInfographic] = useState(false);
-
+  const [currentTimelineIndex, setCurrentTimelineIndex] = useState(0);
+  
+  // Auto-advance timeline every 5 seconds on mobile, 30 seconds on desktop
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['timeline', 'principles', 'pillars', 'leadership'];
-      const scrollPosition = window.scrollY + 200;
-
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+    const isMobile = window.innerWidth <= 768;
+    const interval = setInterval(() => {
+      setCurrentTimelineIndex((prevIndex) => (prevIndex + 1) % 8);
+    }, isMobile ? 10000 : 30000);
+    
+    const handleResize = () => {
+      // Clear and reset interval on resize
+      clearInterval(interval);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - 150;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
   
   const timeline = [
     {
@@ -66,56 +57,63 @@ const About = () => {
       title: t('about.timeline.event1.title'),
       description: t('about.timeline.event1.description'),
       icon: FaUsers,
-      color: '#3498db'
+      color: '#3498db',
+      backgroundImage: '/timeline/event1-bg.jpg',
+      foregroundImage: '/timeline/event1-fg.jpg'
     },
     {
       year: t('about.timeline.event2.year'),
       title: t('about.timeline.event2.title'),
       description: t('about.timeline.event2.description'),
       icon: FaBook,
-      color: '#16a085'
+      color: '#16a085',
+      backgroundImage: '/timeline/event2-bg.jpg',
+      foregroundImage: '/timeline/event2-fg.png'
     },
     {
       year: t('about.timeline.event3.year'),
       title: t('about.timeline.event3.title'),
       description: t('about.timeline.event3.description'),
       icon: FaBullhorn,
-      color: '#e67e22'
+      color: '#e67e22',
+      backgroundImage: '/timeline/event3-bg.jpg',
+      foregroundImage: '/timeline/event3-fg.jpg'
     },
     {
       year: t('about.timeline.event4.year'),
       title: t('about.timeline.event4.title'),
       description: t('about.timeline.event4.description'),
       icon: FaFistRaised,
-      color: '#e74c3c'
+      color: '#e74c3c',
+      backgroundImage: '/timeline/event4-bg.jpg',
+      foregroundImage: '/timeline/event4-fg.jpg'
     },
     {
       year: t('about.timeline.event5.year'),
       title: t('about.timeline.event5.title'),
       description: t('about.timeline.event5.description'),
-      icon: FaTruck,
-      color: '#27ae60'
+      icon: FaDove,
+      color: '#9b59b6',
+      backgroundImage: '/timeline/event5-bg.jpg',
+      foregroundImage: '/timeline/event5-fg.jpg'
     },
     {
       year: t('about.timeline.event6.year'),
       title: t('about.timeline.event6.title'),
       description: t('about.timeline.event6.description'),
-      icon: FaDove,
-      color: '#9b59b6'
+      icon: FaFileAlt,
+      color: '#f39c12',
+      backgroundImage: '/timeline/event6-bg.jpg',
+      foregroundImage: '/timeline/event6-fg.jpg'
     },
     {
       year: t('about.timeline.event7.year'),
       title: t('about.timeline.event7.title'),
       description: t('about.timeline.event7.description'),
-      icon: FaFileAlt,
-      color: '#f39c12'
-    },
-    {
-      year: t('about.timeline.event8.year'),
-      title: t('about.timeline.event8.title'),
-      description: t('about.timeline.event8.description'),
       icon: GiButterfly,
-      color: '#9b59b6'
+      color: '#9b59b6',
+      backgroundImage: '/timeline/event7-bg.jpg',
+      foregroundImage: '/timeline/event7-fg.jpg'
     }
   ];
 
@@ -280,31 +278,82 @@ const About = () => {
 
       {/* Timeline Section */}
       <section id='timeline' className="timeline-section py-5">
-        <Container>
+        <Container fluid>
           <h2 className="section-title text-center mb-5">{t('about.timeline.title')}</h2>
 
-          <div className="timeline-container">
-            {timeline.map((item, index) => (
-              <Row key={index} className={`timeline-item mb-5 ${index % 2 === 0 ? '' : 'flex-row-reverse'}`}>
-                <Col lg={5} className="mb-3">
-                  <div className={`timeline-card ${index % 2 === 0 ? 'text-end' : 'text-start'}`}>
-                    <div className="timeline-year" style={{ color: item.color }}>{item.year}</div>
-                    <h4 className="timeline-title">{item.title}</h4>
-                    <p className="timeline-description">{item.description}</p>
-                  </div>
-                </Col>
-                <Col lg={2} className="d-flex justify-content-center align-items-center">
-                  <div className="timeline-icon-wrapper" style={{ backgroundColor: item.color }}>
-                    <item.icon size={30} color="white" />
-                  </div>
-                </Col>
-                <Col lg={5}></Col>
-              </Row>
-            ))}
+          {/* Interactive Timeline Slider */}
+          <div className="timeline-slider-container">
+            {/* Background Image */}
+            <div 
+              className="timeline-slider-background"
+              style={{
+                backgroundImage: `url(${timeline[currentTimelineIndex].backgroundImage})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              {/* Overlay */}
+              <div className="timeline-slider-overlay"></div>
+            </div>
+
+            {/* Main Content Area */}
+            <div className="timeline-slider-content">
+              <div className="timeline-slider-inner">
+                {/* Content Section */}
+                <div className={`timeline-slider-info ${currentTimelineIndex % 2 === 0 ? 'left' : 'right'}`}>
+                  <div className="timeline-slider-year">{timeline[currentTimelineIndex].year}</div>
+                  <h3 className="timeline-slider-title">{timeline[currentTimelineIndex].title}</h3>
+                  <p className="timeline-slider-description">{timeline[currentTimelineIndex].description}</p>
+                </div>
+
+                {/* Foreground Image */}
+                <div className={`timeline-slider-foreground ${currentTimelineIndex % 2 === 0 ? 'right' : 'left'}`}>
+                  <img 
+                    src={timeline[currentTimelineIndex].foregroundImage}
+                    alt={timeline[currentTimelineIndex].title}
+                    className="timeline-foreground-image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation Arrows - Mobile Only */}
+            <button 
+              className="timeline-slider-arrow timeline-slider-arrow-left"
+              onClick={() => setCurrentTimelineIndex(prev => prev === 0 ? timeline.length - 1 : prev - 1)}
+              aria-label="Previous timeline event"
+            >
+              ‹
+            </button>
+            <button 
+              className="timeline-slider-arrow timeline-slider-arrow-right"
+              onClick={() => setCurrentTimelineIndex(prev => prev === timeline.length - 1 ? 0 : prev + 1)}
+              aria-label="Next timeline event"
+            >
+              ›
+            </button>
+
+            {/* Timeline Years at Bottom */}
+            <div className="timeline-slider-years">
+              <div className="timeline-years-scroll">
+                {timeline.map((item, index) => (
+                  <button
+                    key={index}
+                    className={`timeline-year-button ${currentTimelineIndex === index ? 'active' : ''}`}
+                    onClick={() => setCurrentTimelineIndex(index)}
+                  >
+                    <span className="timeline-year-text">{item.year}</span>
+                    {currentTimelineIndex === index && (
+                      <div className="timeline-year-indicator"></div>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Infographic Image */}
-          <div className="text-center mb-4">
+          <div className="text-center mb-4 mt-5">
             <button 
               className="btn btn-primary infographic-btn"
               onClick={() => setShowInfographic(!showInfographic)}

@@ -6,7 +6,12 @@
     "about": "About Us",
     "manifesto": "Manifesto",
     "joinUs": "Join Us",
-    "language": "Language"
+    "login": "Login",
+    "myProfile": "My Profile",
+    "language": "Language",
+    "vote": "Vote",
+    "dashboard": "Statistics",
+    "candidates": "Candidates"
   },
   "home": {
     "hero": {
@@ -17,8 +22,11 @@
       "learnMore": "Learn More"
     },
     "stats": {
+      "membersCount": "5,000+",
       "members": "Active Members",
+      "projectsCount": "200+",
       "projects": "Community Projects",
+      "approvalCount": "0.5%",
       "approval": "Approval Rating"
     },
     "vision": {
@@ -153,21 +161,16 @@
         "description": "Leaders and activists of Aamjanatar Dol on the streets as front-line fighters in the student-public mass uprising. 7 martyred and hundreds of workers injured to bring down fascism."
       },
       "event5": {
-        "year": "September 2, 2024",
-        "title": "Cancellation of Gano Odhikar Parishad Registration",
-        "description": "Announcement of cancellation of registration of \"Gano Odhikar Parishad\" established under the leadership of Colonel (Retd.) Mia Mashiuzzaman by the new democratic government."
-      },
-      "event6": {
         "year": "January 28, 2025",
         "title": "Establishment of Aamjanatar Dal",
         "description": "Appearance as a new political party named \"Aamjanatar Dal\" under the leadership of Colonel (Retd.) Mia Mashiuzzaman, Tarek Rahman and Farooq Hasan."
       },
-      "event7": {
+      "event6": {
         "year": "December 9, 2025",
         "title": "Struggle for Registration",
         "description": "Secretary Tarek Rahman's continuous 134-hour hunger strike demanding party registration with the Election Commission. Principled registration achieved by proving strong organizational structure at district and upazila levels across the country."
       },
-      "event8": {
+      "event7": {
         "year": "Our Symbol",
         "title": "Election Symbol: Butterfly",
         "description": "\"Butterfly\"—symbol of transformation, freedom and a new dawn. A symbol of our commitment to building an equitable Bangladesh."
@@ -335,8 +338,11 @@
     },
     "form": {
       "title": "Membership Form",
+      "previewTitle": "Live Preview",
       "successTitle": "Thank You!",
       "successMessage": "Your application has been submitted successfully. We will contact you soon.",
+      "goHome": "Go to Home",
+      "learnMore": "Learn More About Us",
       "name": "Full Name",
       "namePlaceholder": "Enter your full name",
       "age": "Age",
@@ -350,10 +356,29 @@
       "photoHelp": "Upload a recent passport-sized photo (optional)",
       "profession": "Profession",
       "professionPlaceholder": "Enter your profession",
+      "education": "Educational Status",
+      "educationSelect": "Select your education level",
+      "educationOptions": {
+        "noBasic": "Did not complete basic schooling",
+        "basicLiteracy": "Basic literacy (can read and write)",
+        "ssc": "Completed SSC/Matriculation",
+        "hsc": "Completed HSC/Intermediate",
+        "diploma": "Completed Diploma",
+        "bachelor": "Completed Bachelor's Degree",
+        "masters": "Completed Master's Degree",
+        "postgrad": "Completed Post-Graduation",
+        "phd": "Completed PhD/Doctorate",
+        "other": "Other"
+      },
       "email": "Email",
       "emailPlaceholder": "Your email address",
       "phone": "Phone Number",
       "phonePlaceholder": "Your phone number",
+      "password": "Password",
+      "passwordPlaceholder": "Create a password",
+      "passwordHelp": "At least 6 characters",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password",
       "politicalActivity": "Previous Political Activity",
       "politicalActivityPlaceholder": "Describe any previous political involvement...",
       "politicalActivityHelp": "Mention if you have been involved with any political party or organization",
@@ -367,14 +392,95 @@
         "ageMin": "Age must be 18 or above",
         "genderRequired": "Gender is required",
         "professionRequired": "Profession is required",
+        "educationRequired": "Educational status is required",
         "emailInvalid": "Valid email is required",
         "phoneInvalid": "Valid phone number is required",
         "aboutMin": "Please write at least 50 characters about yourself",
-        "agreePhilosophyRequired": "You must agree with party philosophy"
+        "agreePhilosophyRequired": "You must agree with party philosophy",
+        "submitFailed": "Failed to submit. Please try again.",
+        "passwordRequired": "Password is required",
+        "passwordTooShort": "Password must be at least 6 characters",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMismatch": "Passwords do not match",
+        "emailInUse": "This email is already registered. Please use a different email or login.",
+        "weakPassword": "Password is too weak. Please use a stronger password.",
+        "invalidEmail": "Invalid email address."
       },
       "agreePhilosophy": "I agree with and am committed to working for Amjonatar Dal's core principles (Sovereignty, Self-reliance, and Good Governance)",
-      "submit": "Submit Application"
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "goToPersonalityTest": "Go to Personality Test",
+      "creatingAccount": "Creating your account...",
+      "savingProfile": "Saving your profile...",
+      "viewProfile": "View My Profile",
+      "uploadingPhoto": "Uploading photo...",
+      "photoUploadFailed": "Photo upload failed, continuing without photo...",
+      "savingData": "Saving your information..."
     }
+  },
+  "login": {
+    "hero": {
+      "title": "Welcome Back",
+      "subtitle": "Login to access your profile"
+    },
+    "form": {
+      "title": "Login",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "loginButton": "Login",
+      "loggingIn": "Logging in...",
+      "forgotPassword": "Forgot Password?",
+      "noAccount": "Don't have an account?",
+      "joinNow": "Join as New Member"
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "instructions": "Enter your email address and we'll send you a link to reset your password.",
+      "sendButton": "Send Reset Link",
+      "sending": "Sending...",
+      "success": "Password reset email sent! Check your inbox.",
+      "backToLogin": "Back to Login"
+    },
+    "errors": {
+      "default": "Login failed. Please try again.",
+      "userNotFound": "No account found with this email.",
+      "wrongPassword": "Incorrect password.",
+      "invalidEmail": "Invalid email address.",
+      "tooManyRequests": "Too many failed attempts. Please try again later.",
+      "invalidCredential": "Invalid email or password.",
+      "resetFailed": "Failed to send reset email."
+    },
+    "success": {
+      "welcome": "Welcome Back!",
+      "redirecting": "Redirecting to your profile..."
+    }
+  },
+  "profile": {
+    "title": "My Profile",
+    "subtitle": "Your membership details",
+    "loading": "Loading your profile...",
+    "notFound": "Profile not found",
+    "joinNow": "Join Now",
+    "membershipStatus": "Membership Status",
+    "youthWingMember": "Youth Wing Member",
+    "age": "Age",
+    "years": "years",
+    "gender": "Gender",
+    "email": "Email",
+    "phone": "Phone",
+    "politicalActivity": "Political Experience",
+    "about": "About",
+    "logout": "Logout",
+    "status": {
+      "pending": "Pending Review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "notices": { "title": "Internal Notices" },
+    "discussions": { "title": "Discussions" },
+    "events": { "title": "Upcoming Events" }
   },
   "footer": {
     "tagline": "Self-reliant Economy, Prosperity through Good Governance",
@@ -398,5 +504,276 @@
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
+  },
+  "personalityTest": {
+    "title": "Political Mindset Assessment",
+    "subtitle": "Answer these situational questions to help us understand your political perspective",
+    "progress": "Overall Progress",
+    "politicalIdeology": "Political Ideology",
+    "testComplete": "Assessment Complete!",
+    "reviewInfo": "Review your information and political compass result",
+    "answeredQuestions": "You answered {{count}} questions and skipped {{skipped}} layers.",
+    "backToForm": "Back to Form",
+    "previousLayer": "Previous Layer",
+    "skipLayer": "Skip Layer",
+    "nextLayer": "Next Layer",
+    "complete": "Complete",
+    "compass": {
+      "title": "Your Political Compass",
+      "authoritarian": "Authoritarian",
+      "libertarian": "Libertarian",
+      "left": "Left",
+      "right": "Right",
+      "economic": "Economic",
+      "social": "Social",
+      "you": "YOU",
+      "legendHint": "Hover over labels to see famous political figures",
+      "politicalPosition": "Political Position",
+      "labels": {
+        "authLeft": "Authoritarian Left",
+        "authRight": "Authoritarian Right",
+        "libLeft": "Libertarian Left",
+        "libRight": "Libertarian Right",
+        "authoritarian": "Authoritarian",
+        "libertarian": "Libertarian",
+        "left": "Left-Leaning",
+        "right": "Right-Leaning",
+        "centrist": "Centrist",
+        "moderate": "Moderate"
+      }
+    },
+    "preview": {
+      "title": "Your Information",
+      "years": "years old",
+      "youthWing": "Youth Wing",
+      "yes": "Yes",
+      "confirmText": "Please review your information above. Once submitted, your application will be reviewed by our team.",
+      "editAnswers": "Edit Answers",
+      "editPersonalInfo": "Edit Personal Info",
+      "membershipCard": "Membership Card",
+      "pending": "Pending",
+      "additionalInfo": "Additional Information",
+      "download": "Download Card",
+      "edit": "Edit Info"
+    },
+    "layers": {
+      "layer1": {
+        "title": "Economic Systems",
+        "description": "Questions about economic models and market systems"
+      },
+      "layer2": {
+        "title": "Governance & Power",
+        "description": "Questions about political authority and leadership"
+      },
+      "layer3": {
+        "title": "Social Values & Rights",
+        "description": "Questions about individual rights and cultural values"
+      },
+      "layer4": {
+        "title": "Geopolitics & Structure",
+        "description": "Questions about national and international relations"
+      },
+      "layer5": {
+        "title": "Personal Philosophy",
+        "description": "Questions about your core beliefs and principles"
+      }
+    },
+    "questions": {
+      "q1": {
+        "situation": "A major factory in your town is closing down. The owner wants to sell it to a foreign corporation, but workers are demanding the government take it over to save jobs.",
+        "options": {
+          "a": { "text": "The owner has every right to sell - it's their property and their decision", "leftRight": 8, "libAuth": 0 },
+          "b": { "text": "The government should step in and nationalize it to protect workers' livelihoods", "leftRight": -7, "libAuth": 3 },
+          "c": { "text": "Workers should be given the first option to buy and run it as a cooperative", "leftRight": -4, "libAuth": -3 },
+          "d": { "text": "Let the market decide - if the business isn't profitable, it shouldn't be artificially kept alive", "leftRight": 7, "libAuth": -2 }
+        }
+      },
+      "q2": {
+        "situation": "Cheap imported clothing is flooding local markets, causing local textile workers to lose jobs. What should be done?",
+        "options": {
+          "a": { "text": "Impose heavy tariffs on imports to protect local industry", "leftRight": -5, "libAuth": 4 },
+          "b": { "text": "Allow free trade - consumers deserve affordable options and the market will adapt", "leftRight": 8, "libAuth": -2 },
+          "c": { "text": "Provide retraining programs for workers while gradually reducing protections", "leftRight": 2, "libAuth": 0 },
+          "d": { "text": "Ban all textile imports and focus only on domestic production", "leftRight": -8, "libAuth": 7 }
+        }
+      },
+      "q3": {
+        "situation": "During an economic recession, the government is deciding how to respond. What approach do you support?",
+        "options": {
+          "a": { "text": "Government should spend heavily on infrastructure and social programs to stimulate the economy", "leftRight": -6, "libAuth": 3 },
+          "b": { "text": "Government should cut spending and taxes, letting the private sector lead recovery", "leftRight": 7, "libAuth": -2 },
+          "c": { "text": "Do nothing - recessions are natural cycles that correct themselves", "leftRight": 4, "libAuth": -5 },
+          "d": { "text": "Focus on supporting small businesses and local enterprises specifically", "leftRight": -2, "libAuth": -2 }
+        }
+      },
+      "q4": {
+        "situation": "Your city's water supply is managed by a government agency that's inefficient and poorly maintained. A private company offers to take over.",
+        "options": {
+          "a": { "text": "Accept privatization - private companies are more efficient and accountable", "leftRight": 7, "libAuth": -1 },
+          "b": { "text": "Keep it public - water is a basic right that shouldn't be profit-driven", "leftRight": -6, "libAuth": 2 },
+          "c": { "text": "Create a public-private partnership with strict government oversight", "leftRight": 1, "libAuth": 1 },
+          "d": { "text": "Reform the public agency instead of handing over essential services", "leftRight": -3, "libAuth": 2 }
+        }
+      },
+      "q5": {
+        "situation": "A new policy proposes that all major economic decisions should be made jointly by business leaders, government officials, and union representatives.",
+        "options": {
+          "a": { "text": "Good idea - cooperation between all stakeholders leads to better outcomes", "leftRight": -2, "libAuth": 2 },
+          "b": { "text": "Workers' unions alone should have more decision-making power", "leftRight": -7, "libAuth": -1 },
+          "c": { "text": "Business owners should make their own decisions without interference", "leftRight": 8, "libAuth": -3 },
+          "d": { "text": "Only elected representatives should make economic policy", "leftRight": 0, "libAuth": 4 }
+        }
+      },
+      "q6": {
+        "situation": "Your country is facing a crisis. Some argue for a strong leader with emergency powers, others want to maintain democratic processes despite slower decision-making.",
+        "options": {
+          "a": { "text": "Democracy must be preserved even if it's slower - no one should have absolute power", "leftRight": 0, "libAuth": -7 },
+          "b": { "text": "A temporary strong leader is needed to handle the crisis effectively", "leftRight": 1, "libAuth": 8 },
+          "c": { "text": "Form a coalition government representing all major groups", "leftRight": -1, "libAuth": 0 },
+          "d": { "text": "Let experts and technocrats handle it, not politicians", "leftRight": 2, "libAuth": 4 }
+        }
+      },
+      "q7": {
+        "situation": "The head of state position in your country is being debated. What system do you prefer?",
+        "options": {
+          "a": { "text": "An elected president who serves limited terms", "leftRight": 0, "libAuth": -2 },
+          "b": { "text": "A constitutional monarch who serves as a unifying figurehead", "leftRight": 2, "libAuth": 3 },
+          "c": { "text": "A parliamentary system where the prime minister leads", "leftRight": -1, "libAuth": 0 },
+          "d": { "text": "Direct democracy where citizens vote on all major decisions", "leftRight": -2, "libAuth": -6 }
+        }
+      },
+      "q8": {
+        "situation": "A complex policy about nuclear energy needs to be decided. Scientists recommend one path, but public opinion strongly opposes it.",
+        "options": {
+          "a": { "text": "Follow the scientists' recommendation - experts know best", "leftRight": 1, "libAuth": 5 },
+          "b": { "text": "Follow public opinion - democracy means listening to the people", "leftRight": -1, "libAuth": -3 },
+          "c": { "text": "Educate the public first, then hold a referendum", "leftRight": 0, "libAuth": -1 },
+          "d": { "text": "Let elected representatives decide after consulting both sides", "leftRight": 0, "libAuth": 2 }
+        }
+      },
+      "q9": {
+        "situation": "Government positions should be filled based on:",
+        "options": {
+          "a": { "text": "Merit and qualifications alone - the best person for the job", "leftRight": 3, "libAuth": 0 },
+          "b": { "text": "A combination of merit and ensuring representation from all backgrounds", "leftRight": -3, "libAuth": 1 },
+          "c": { "text": "Family connections and social standing have always worked", "leftRight": 4, "libAuth": 6 },
+          "d": { "text": "Random selection from qualified candidates to prevent corruption", "leftRight": -1, "libAuth": -4 }
+        }
+      },
+      "q10": {
+        "situation": "The government proposes extensive surveillance to prevent crime and terrorism. How do you feel?",
+        "options": {
+          "a": { "text": "Security is worth some privacy loss - protect the nation at all costs", "leftRight": 2, "libAuth": 9 },
+          "b": { "text": "Absolutely not - this is a step toward totalitarianism", "leftRight": 0, "libAuth": -8 },
+          "c": { "text": "Only with strict judicial oversight and transparency", "leftRight": 0, "libAuth": 2 },
+          "d": { "text": "Communities should self-govern without any central authority", "leftRight": -3, "libAuth": -9 }
+        }
+      },
+      "q11": {
+        "situation": "A new law would require everyone to participate in community service programs. What's your view?",
+        "options": {
+          "a": { "text": "Oppose - individuals should choose how to spend their time", "leftRight": 4, "libAuth": -6 },
+          "b": { "text": "Support - community cohesion requires everyone to contribute", "leftRight": -4, "libAuth": 5 },
+          "c": { "text": "Support with exemptions for those with valid reasons", "leftRight": -1, "libAuth": 2 },
+          "d": { "text": "Let communities decide their own requirements locally", "leftRight": -2, "libAuth": -4 }
+        }
+      },
+      "q12": {
+        "situation": "A religious group wants their moral code to become the basis for national laws. Your position?",
+        "options": {
+          "a": { "text": "Religion and state must be completely separate", "leftRight": -2, "libAuth": -5 },
+          "b": { "text": "Religious values can inform laws but not dictate them", "leftRight": 0, "libAuth": 0 },
+          "c": { "text": "The majority religion's values should guide legislation", "leftRight": 3, "libAuth": 6 },
+          "d": { "text": "Each community should be able to follow its own religious laws", "leftRight": 1, "libAuth": -3 }
+        }
+      },
+      "q13": {
+        "situation": "Traditional gender roles are being challenged in schools and workplaces. What approach should society take?",
+        "options": {
+          "a": { "text": "Actively promote change and new definitions of gender roles", "leftRight": -5, "libAuth": -2 },
+          "b": { "text": "Preserve traditional values that have worked for generations", "leftRight": 5, "libAuth": 4 },
+          "c": { "text": "Let individuals decide without pushing any particular view", "leftRight": 2, "libAuth": -5 },
+          "d": { "text": "Gradual change through education and dialogue", "leftRight": -2, "libAuth": 0 }
+        }
+      },
+      "q14": {
+        "situation": "A wealthy businessman wants to fund a private hospital that would only serve those who can pay premium prices.",
+        "options": {
+          "a": { "text": "Allow it - economic freedom includes healthcare choices", "leftRight": 8, "libAuth": -3 },
+          "b": { "text": "Deny it - healthcare should be equal for all, not tiered by wealth", "leftRight": -7, "libAuth": 3 },
+          "c": { "text": "Allow it only if they also fund free care for the poor", "leftRight": -2, "libAuth": 1 },
+          "d": { "text": "The government should control all healthcare facilities", "leftRight": -8, "libAuth": 6 }
+        }
+      },
+      "q15": {
+        "situation": "Immigrants in your country want to maintain their traditional festivals and languages in public spaces.",
+        "options": {
+          "a": { "text": "Encourage cultural diversity - it enriches society", "leftRight": -4, "libAuth": -3 },
+          "b": { "text": "They should assimilate to the local culture in public", "leftRight": 4, "libAuth": 4 },
+          "c": { "text": "Private cultural expression is fine, but official matters should use local customs", "leftRight": 1, "libAuth": 1 },
+          "d": { "text": "Each community should have autonomy to maintain its culture", "leftRight": -2, "libAuth": -5 }
+        }
+      },
+      "q16": {
+        "situation": "An international organization wants your country to follow global environmental standards that would hurt local industries.",
+        "options": {
+          "a": { "text": "Accept - global cooperation is essential for planetary survival", "leftRight": -4, "libAuth": 3 },
+          "b": { "text": "Reject - national interests should come first", "leftRight": 5, "libAuth": 4 },
+          "c": { "text": "Negotiate for exemptions while supporting the overall goal", "leftRight": 1, "libAuth": 1 },
+          "d": { "text": "Propose alternative standards that balance both concerns", "leftRight": 0, "libAuth": 0 }
+        }
+      },
+      "q17": {
+        "situation": "Some regions in your country want more autonomy to make their own laws and keep more tax revenue locally.",
+        "options": {
+          "a": { "text": "Support federalism - local governments understand local needs better", "leftRight": -1, "libAuth": -6 },
+          "b": { "text": "Oppose - a strong central government ensures equality and unity", "leftRight": 1, "libAuth": 7 },
+          "c": { "text": "Some autonomy on cultural matters, but economic policy should be national", "leftRight": 0, "libAuth": 3 },
+          "d": { "text": "Full independence for any region that wants it", "leftRight": -3, "libAuth": -8 }
+        }
+      },
+      "q18": {
+        "situation": "A neighboring country is experiencing a civil war with human rights abuses. What should your country do?",
+        "options": {
+          "a": { "text": "Intervene to stop the abuses - we have a moral obligation", "leftRight": -2, "libAuth": 4 },
+          "b": { "text": "Stay out completely - it's not our business and intervention causes more problems", "leftRight": 3, "libAuth": -4 },
+          "c": { "text": "Provide humanitarian aid but no military involvement", "leftRight": -3, "libAuth": -1 },
+          "d": { "text": "Work through international organizations only", "leftRight": -1, "libAuth": 2 }
+        }
+      },
+      "q19": {
+        "situation": "Military spending is being debated in parliament. What's your position?",
+        "options": {
+          "a": { "text": "Increase spending - a strong military ensures peace through strength", "leftRight": 5, "libAuth": 6 },
+          "b": { "text": "Decrease spending - invest in education and healthcare instead", "leftRight": -5, "libAuth": -2 },
+          "c": { "text": "Maintain current levels with focus on defense, not offense", "leftRight": 1, "libAuth": 2 },
+          "d": { "text": "Abolish the military entirely and invest in diplomacy", "leftRight": -7, "libAuth": -7 }
+        }
+      },
+      "q20": {
+        "situation": "A smaller nation wants independence from a larger one. The larger nation refuses. Your view?",
+        "options": {
+          "a": { "text": "Every people has the right to self-determination and independence", "leftRight": -2, "libAuth": -6 },
+          "b": { "text": "Territorial integrity of nations should be preserved", "leftRight": 3, "libAuth": 5 },
+          "c": { "text": "Negotiate for greater autonomy within the existing structure", "leftRight": 0, "libAuth": 2 },
+          "d": { "text": "International community should decide based on the situation", "leftRight": -1, "libAuth": 3 }
+        }
+      }
+    }
+  },
+  "candidates": {
+    "title": "2026 Election Candidates",
+    "subtitle": "Meet our dedicated candidates for the 2026 national election",
+    "searchPlaceholder": "Search by name, seat, or father's name...",
+    "allSeats": "All Seats",
+    "showingResults": "Showing",
+    "candidates": "candidates",
+    "fatherName": "Father's Name",
+    "motherName": "Mother's Name",
+    "dob": "Date of Birth",
+    "yearsOld": "years old",
+    "education": "Education",
+    "occupation": "Occupation",
+    "noResults": "No candidates found matching your search criteria."
   }
 }

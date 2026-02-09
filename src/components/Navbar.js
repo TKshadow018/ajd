@@ -1,14 +1,22 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, Button, Dropdown } from 'react-bootstrap';
 import { FaBars, FaTimes, FaGlobe } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { useSelector, useDispatch } from 'react-redux';
+import { signOut } from 'firebase/auth';
+import { auth } from '../services/firebase';
+import { logout } from '../redux/slices/authSlice';
+import { LANGUAGES } from '../utils';
 import './Navbar.css';
 
 const CustomNavbar = () => {
   const [expanded, setExpanded] = React.useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   const isActive = (path) => location.pathname === path;
 
@@ -17,13 +25,18 @@ const CustomNavbar = () => {
     setExpanded(false);
   };
 
-  const languages = [
-    { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'bn', name: 'বাংলা', flag: '🇧🇩' },
-    { code: 'local', name: 'নারায়ণগঞ্জ', flag: '🏠' }
-  ];
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      dispatch(logout());
+      setExpanded(false);
+      navigate('/');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const currentLanguage = LANGUAGES.find(lang => lang.code === i18n.language) || LANGUAGES[0];
 
   return (
     <Navbar expanded={expanded} expand="lg" className="custom-navbar --cursor-color-1" fixed="top">
@@ -68,6 +81,30 @@ const CustomNavbar = () => {
             >
               {t('nav.about')}
             </Nav.Link>
+            {/* <Nav.Link
+              as={Link}
+              to="/vote"
+              className={isActive('/vote') ? 'active' : ''}
+              onClick={() => setExpanded(false)}
+            >
+              {t('nav.vote') || 'ভোট দিন'}
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/dashboard"
+              className={isActive('/dashboard') ? 'active' : ''}
+              onClick={() => setExpanded(false)}
+            >
+              {t('nav.dashboard') || 'পরিসংখ্যান'}
+            </Nav.Link> */}
+            <Nav.Link
+              as={Link}
+              to="/candidates"
+              className={isActive('/candidates') ? 'active' : ''}
+              onClick={() => setExpanded(false)}
+            >
+              {t('nav.candidates') || 'Candidates'}
+            </Nav.Link>
             
             <Dropdown className="language-dropdown ms-lg-2">
               <Dropdown.Toggle variant="outline-light" className="language-toggle">
@@ -77,7 +114,7 @@ const CustomNavbar = () => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu align="end" className="language-menu">
-                {languages.map((lang) => (
+                {LANGUAGES.map((lang) => (
                   <Dropdown.Item
                     key={lang.code}
                     onClick={() => changeLanguage(lang.code)}
@@ -91,15 +128,38 @@ const CustomNavbar = () => {
               </Dropdown.Menu>
             </Dropdown>
 
-            <Button
-              as={Link}
-              to="/join"
-              variant="primary"
-              className="join-btn ms-lg-3"
-              onClick={() => setExpanded(false)}
-            >
-              {t('nav.joinUs')}
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Button
+                  as={Link}
+                  to="/profile"
+                  variant="success"
+                  className="join-btn ms-lg-3"
+                  onClick={() => setExpanded(false)}
+                >
+                  <i className="bi bi-person-circle me-2"></i>
+                  {t('nav.myProfile') || 'My Profile'}
+                </Button>
+                <Button
+                  variant="outline-danger"
+                  className="logout-btn ms-lg-2"
+                  onClick={handleLogout}
+                >
+                  <i className="bi bi-box-arrow-right"></i>
+                </Button>
+              </>
+            ) : (
+              <Button
+                as={Link}
+                to="/login"
+                variant="primary"
+                className="join-btn ms-lg-3"
+                onClick={() => setExpanded(false)}
+              >
+                <i className="bi bi-box-arrow-in-right me-2"></i>
+                {t('nav.login') || 'Login'}
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

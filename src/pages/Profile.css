@@ -1,0 +1,159 @@
+.profile-page {
+  background: var(--background-light, #f8f9fa);
+}
+
+/* Profile Content - Two Column Layout */
+.profile-content-section {
+  padding: 30px 0 60px;
+}
+
+/* Section Cards */
+.profile-section-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.profile-section-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color, #1a5490) 0%,
+    var(--primary-light, #2d7ab8) 100%
+  );
+  color: white;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+}
+
+/* Notice Items */
+.notice-item {
+  padding: 10px 0;
+}
+
+.notice-badge {
+  margin-bottom: 8px;
+}
+
+.notice-item h6 {
+  color: var(--text-color, #333);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Discussion Items */
+.discussion-item {
+  padding: 10px 0;
+}
+
+.discussion-avatar {
+  font-size: 2.5rem;
+  color: var(--primary-color, #1a5490);
+  line-height: 1;
+}
+
+.discussion-actions .btn-link {
+  color: var(--text-secondary, #6c757d);
+  text-decoration: none;
+}
+
+.discussion-actions .btn-link:hover {
+  color: var(--primary-color, #1a5490);
+}
+
+/* Event Items */
+.event-date-box {
+  min-width: 60px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color, #1a5490) 0%,
+    var(--primary-light, #2d7ab8) 100%
+  );
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-item h6 {
+  color: var(--text-color, #333);
+  font-weight: 600;
+}
+
+/* Sidebar */
+.profile-sidebar {
+  padding-top: 20px;
+}
+
+/* Loading State */
+.profile-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-loading p {
+  color: var(--primary-color, #1a5490);
+  font-size: 1.2rem;
+}
+
+/* Tabs Theme */
+.profile-tabs-theme .nav-tabs {
+  border-bottom: 2px solid var(--primary-color, #1a5490);
+}
+
+.profile-tabs-theme .nav-link {
+  color: var(--text-primary, #1a5490);
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  transition: color 0.2s;
+}
+
+.profile-tabs-theme .nav-link.active,
+.profile-tabs-theme .nav-link:focus,
+.profile-tabs-theme .nav-link:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color, #1a5490) 0%,
+    var(--primary-light, #2d7ab8) 100%
+  );
+  border-radius: 8px 8px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .profile-sidebar {
+    position: static !important;
+    margin-top: 30px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

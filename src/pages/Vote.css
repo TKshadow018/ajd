@@ -1,0 +1,16 @@
+.vote-page {
+  background: var(--bg-primary);
+}
+
+.vote-page .container {
+  max-width: 900px;
+}
+
+/* Standalone vote main content - no navbar padding */
+.vote-main-content {
+  padding: 0;
+}
+
+.vote-main-content .vote-page {
+  padding: 0;
+}

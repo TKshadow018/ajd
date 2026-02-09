@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জুলাই জাতীয় সনদ ২০২৫ - বিশ্লেষণ</title>
+    <style>
+        :root {
+            --primary: #006a4e; /* Bangladesh Green */
+            --secondary: #f42a41; /* Bangladesh Red */
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'SolaimanLipi', 'Kalpurush', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        p.subtitle {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Search Box */
+        .search-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-box:focus {
+            border-color: var(--primary);
+        }
+
+        .stats {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .point-id {
+            background-color: var(--primary);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-top: 10px;
+        }
+
+        .content {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .opposition-box {
+            background-color: #fff0f0;
+            border-left: 4px solid var(--secondary);
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: auto;
+        }
+
+        .opposition-title {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .party-tag {
+            display: inline-block;
+            background: white;
+            border: 1px solid #ffcccc;
+            color: #d32f2f;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 2px;
+        }
+
+        .consensus {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>জুলাই জাতীয় সনদ ২০২৫</h1>
+    <p class="subtitle">৮৪টি সংস্কার প্রস্তাব ও রাজনৈতিক দলসমূহের অবস্থান বিশ্লেষণ</p>
+</header>
+
+<div class="container">
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="খুঁজুন (দল, বিষয় বা নম্বর দিয়ে)... যেমন: 'BNP', 'ভাষা', '10'">
+        <div class="stats" id="resultCount">৮৪টি প্রস্তাব প্রদর্শিত হচ্ছে</div>
+    </div>
+
+    <div class="grid" id="contentGrid">
+        </div>
+</div>
+
+<footer>
+    <p>উৎস: জুলাই জাতীয় সনদ ২০২৫ (Final July Charter 16 October 2025.pdf)</p>
+</footer>
+
+<script>
+    // Party Mapping from Appendix (Page 44-45)
+    const parties = {
+        1: "১২ দলীয় জোট",
+        2: "আমজনতার দল",
+        3: "এবি পার্টি",
+        4: "ইসলামী আন্দোলন",
+        5: "ইসলামী ঐক্যজোট",
+        6: "খেলাফত মজলিস",
+        7: "গণঅধিকার পরিষদ",
+        8: "গণতান্ত্রিক বাম ঐক্য",
+        9: "গণফোরাম",
+        10: "গণসংহতি আন্দোলন",
+        11: "জমিয়তে উলামায়ে ইসলাম",
+        12: "জাকের পার্টি",
+        13: "জাতীয় গণফ্রন্ট",
+        14: "জাতীয় নাগরিক পার্টি",
+        15: "জেএসডি",
+        16: "এনডিএম",
+        17: "জাতীয়তাবাদী সমমনা জোট",
+        18: "নাগরিক ঐক্য",
+        19: "বাংলাদেশ খেলাফত মজলিস",
+        20: "বাংলাদেশ জাসদ",
+        21: "বিএনপি",
+        22: "জামায়াতে ইসলামী",
+        23: "নেজামে ইসলাম পার্টি",
+        24: "বাংলাদেশ লেবার পার্টি",
+        25: "সিপিবি",
+        26: "বিপ্লবী কমিউনিস্ট লীগ",
+        27: "বাসদ (মার্কসবাদী)",
+        28: "বাসদ",
+        29: "বিএসপি",
+        30: "বিপ্লবী ওয়ার্কার্স পার্টি",
+        31: "ভাসানী জনশক্তি পার্টি",
+        32: "রাষ্ট্র সংস্কার আন্দোলন",
+        33: "এলডিপি"
+    };
+
+    // Helper to get party names from IDs
+    function getParties(ids) {
+        return ids.map(id => parties[id] || `Unknown(${id})`);
+    }
+
+    // The 84 Points Data
+    const pointsData = [
+        { id: 1, title: "রাষ্ট্রভাষা", text: "প্রজাতন্ত্রের রাষ্ট্রভাষা বাংলা এবং নাগরিকদের মাতৃভাষা হিসেবে ব্যবহৃত অন্যান্য ভাষার স্বীকৃতি।", dissenters: [9, 15, 28] },
+        { id: 2, title: "নাগরিক পরিচয়", text: "নাগরিকগণ 'বাংলাদেশী' বলিয়া পরিচিত হইবেন।", dissenters: [9, 15, 28] },
+        { id: 3, title: "সংবিধান সংশোধন পদ্ধতি", text: "দ্বি-কক্ষ বিশিষ্ট সংসদে সংশোধনী পাস। উচ্চকক্ষ ও গণভোটের বিধান।", dissenters: [21, 28] },
+        { id: 4, title: "অনুচ্ছেদ ৭ক ও ৭খ বিলুপ্তি", text: "সংবিধান স্থগিতকরণ অপরাধ সংক্রান্ত অনুচ্ছেদ বিলোপ।", dissenters: [8, 9, 20] },
+        { id: 5, title: "ক্রান্তিকালীন বিধান", text: "অনুচ্ছেদ ১৫০(২) সংশোধন এবং ৫ম ও ৬ষ্ঠ তফসিল বাতিল।", dissenters: [12, 13, 20, 25, 27, 28, 29, 30, 31] },
+        { id: 6, title: "জরুরি অবস্থা", text: "জরুরি অবস্থা ঘোষণার বিধানে 'অভ্যন্তরীণ গোলযোগ' শব্দ পরিবর্তন ও মন্ত্রিসভার অনুমোদন বাধ্যতামূলক করা।", dissenters: [27] },
+        { id: 7, title: "রাষ্ট্রীয় মূলনীতি", text: "মূলনীতি: সাম্য, মানবিক মর্যাদা, সামাজিক ন্যায়বিচার, ধর্মীয় স্বাধীনতা ও সম্প্রীতি।", dissenters: [9, 15, 20, 25, 27, 28] },
+        { id: 8, title: "সম্প্রদায়ের সহাবস্থান", text: "বহু-জাতি, বহু-ধর্মী ও বহু-সংস্কৃতির দেশ হিসেবে স্বীকৃতি।", dissenters: [9, 27, 29] },
+        { id: 9, title: "মৌলিক অধিকার সম্প্রসারণ", text: "মৌলিক অধিকারের তালিকা ও সুরক্ষা বৃদ্ধি।", dissenters: [] },
+        { id: 10, title: "রাষ্ট্রপতি নির্বাচন", text: "উভয় কক্ষের সদস্যদের ভোটে রাষ্ট্রপতি নির্বাচন।", dissenters: [27] },
+        { id: 11, title: "রাষ্ট্রপতির ক্ষমতা", text: "সাংবিধানিক পদসমূহে (যেমন মানবাধিকার কমিশন, ব্যাংক গভর্নর) রাষ্ট্রপতির সরাসরি নিয়োগ ক্ষমতা।", dissenters: [1, 3, 4, 8, 11, 16, 17, 21, 24, 33] },
+        { id: 12, title: "রাষ্ট্রপতির অভিশংসন", text: "উভয় কক্ষের দুই-তৃতীয়াংশ ভোটে অভিশংসন।", dissenters: [9, 13, 18] },
+        { id: 13, title: "রাষ্ট্রপতির ক্ষমা প্রদর্শন", text: "ক্ষমা প্রদর্শনের আগে ভুক্তভোগীর পরিবারের সম্মতি গ্রহণ।", dissenters: [] },
+        { id: 14, title: "প্রধানমন্ত্রীর মেয়াদ", text: "সর্বোচ্চ ১০ বছর বা দুই মেয়াদ।", dissenters: [] },
+        { id: 15, title: "দলীয় ও সরকারি পদ", text: "প্রধানমন্ত্রী একই সাথে দলীয় প্রধান থাকতে পারবেন না।", dissenters: [1, 16, 17, 21] },
+        { id: 16, title: "তত্ত্বাবধায়ক সরকার", text: "নির্বাচনকালীন নির্দলীয় তত্ত্বাবধায়ক সরকার ব্যবস্থা পুনঃপ্রবর্তন (বিস্তারিত পদ্ধতি)।", dissenters: [4, 22, 1, 11, 16, 17, 21, 24, 33, 20, 23] },
+        { id: 17, title: "আইনসভা গঠন", text: "দ্বি-কক্ষ বিশিষ্ট আইনসভা (নিম্নকক্ষ ও উচ্চকক্ষ/সিনেট)।", dissenters: [2, 11, 25, 28, 33] },
+        { id: 18, title: "উচ্চকক্ষের গঠন", text: "সংখ্যানুপাতিক হারে ১০০ সদস্য। রাজনৈতিক দলের মনোনয়ন।", dissenters: [1, 16, 17, 21, 24, 28, 33, 19] },
+        { id: 19, title: "উচ্চকক্ষের দায়িত্ব", text: "আইন পর্যালোচনার ক্ষমতা, অর্থবিল বা আস্থা ভোটের ক্ষমতা নেই।", dissenters: [2, 11, 16, 17, 21, 25, 28, 33] },
+        { id: 20, title: "উচ্চকক্ষ সদস্যদের যোগ্যতা", text: "নিম্নকক্ষের অনুরূপ যোগ্যতা।", dissenters: [8, 9, 11, 13, 26, 28, 29] },
+        { id: 21, title: "নারী আসন সংখ্যা", text: "জাতীয় সংসদে নারী প্রতিনিধিত্ব ১০০ আসনে উন্নীতকরণ।", dissenters: [] },
+        { id: 22, title: "নারী আসন পদ্ধতি", text: "সংরক্ষিত আসন বজায় রাখা এবং সাধারণ আসনে নারী মনোনয়ন বাধ্যতামূলক করা (৫-১০%)।", dissenters: [20, 25, 27, 28, 4, 19, 23, 14] },
+        { id: 23, title: "ডেপুটি স্পিকার", text: "বিরোধী দল থেকে ডেপুটি স্পিকার মনোনয়ন।", dissenters: [26] },
+        { id: 24, title: "সংসদীয় কমিটি সভাপতি", text: "গুরুত্বপূর্ণ কমিটিতে বিরোধী দল থেকে সভাপতি।", dissenters: [] },
+        { id: 25, title: "আস্থা ভোট (অনুচ্ছেদ ৭০)", text: "শুধুমাত্র অর্থবিল ও আস্থা ভোট ছাড়া অন্য ক্ষেত্রে দলের বিরুদ্ধে ভোট দেয়ার স্বাধীনতা।", dissenters: [21] },
+        { id: 26, title: "আন্তর্জাতিক চুক্তি", text: "আন্তর্জাতিক চুক্তি সংসদে অনুমোদন (Ratify) করতে হবে।", dissenters: [18, 21, 29] },
+        { id: 27, title: "সীমানা নির্ধারণ", text: "প্রতি ১০ বছর পর বা জনশুমারির পর সীমানা নির্ধারণ কমিটি।", dissenters: [33] },
+        { id: 28, title: "প্রধান বিচারপতি নিয়োগ", text: "রাষ্ট্রপতি আপীল বিভাগের বিচারপতিদের মধ্য থেকে নিয়োগ দেবেন।", dissenters: [] },
+        { id: 29, title: "জ্যেষ্ঠতা লঙ্ঘন রোধ", text: "আপীল বিভাগের জ্যেষ্ঠতম বিচারপতিকে প্রধান বিচারপতি নিয়োগ।", dissenters: [21] },
+        { id: 30, title: "বিচারক সংখ্যা", text: "প্রয়োজনীয় সংখ্যক বিচারক নিয়োগের বিধান।", dissenters: [] },
+        { id: 31, title: "বিচারক নিয়োগ কমিশন", text: "স্বাধীন বিচার বিভাগীয় নিয়োগ কমিশন (JAC) গঠন।", dissenters: [21] },
+        { id: 32, title: "নিয়োগ কমিশন বিধান", text: "সংবিধানে কমিশনের বিধান অন্তর্ভুক্ত করা।", dissenters: [3, 21, 27, 33] },
+        { id: 33, title: "বিচার বিভাগের স্বাধীনতা", text: "বিচার বিভাগের পূর্ণ স্বাধীনতা নিশ্চিত করা।", dissenters: [21, 33] },
+        { id: 34, title: "সুপ্রীম কোর্ট বিকেন্দ্রীকরণ", text: "বিভাগীয় পর্যায়ে হাইকোর্টের স্থায়ী বেঞ্চ।", dissenters: [9] },
+        { id: 35, title: "বিচারক অপসারণ", text: "সুপ্রীম জুডিসিয়াল কাউন্সিল শক্তিশালী করা।", dissenters: [11, 22] },
+        { id: 36, title: "অধস্তন আদালত", text: "চাকরির নিয়ন্ত্রণ সম্পূর্ণ সুপ্রীম কোর্টের হাতে ন্যস্ত।", dissenters: [] },
+        { id: 37, title: "স্থায়ী অ্যাটর্নি সার্ভিস", text: "স্থায়ী সরকারি অ্যাটর্নি সার্ভিস গঠন।", dissenters: [29] },
+        { id: 38, title: "নির্বাচন কমিশন নিয়োগ", text: "বাছাই কমিটির মাধ্যমে নির্বাচন কমিশনার নিয়োগ।", dissenters: [] },
+        { id: 39, title: "ন্যায়পাল", text: "ন্যায়পাল নিয়োগ ও কার্যকর করা।", dissenters: [1, 2, 16, 17, 21, 24, 33] },
+        { id: 40, title: "পিএসসি (PSC) নিয়োগ", text: "সাংবিধানিক কাউন্সিলের মাধ্যমে পিএসসি সদস্য নিয়োগ।", dissenters: [1, 2, 16, 17, 21, 24, 33] },
+        { id: 41, title: "মহা হিসাব-নিরীক্ষক নিয়োগ", text: "বাছাই কমিটির মাধ্যমে সিএজি নিয়োগ।", dissenters: [1, 2, 16, 17, 21, 24, 33] },
+        { id: 42, title: "দুদক (ACC) সাংবিধানিক", text: "দুদককে সাংবিধানিক প্রতিষ্ঠান করা ও নিয়োগ প্রক্রিয়া।", dissenters: [1, 2, 16, 17, 21, 24, 33] },
+        { id: 43, title: "ক্ষমতার অপব্যবহার", text: "অনুচ্ছেদ ২০(২) সংশোধন: অবৈধ আয় ও ক্ষমতার অপব্যবহার রোধ।", dissenters: [] },
+        { id: 44, title: "স্থানীয় সরকার নির্বাচন", text: "নির্বাচন কমিশনের অধীনে স্থানীয় সরকার নির্বাচন।", dissenters: [] },
+        { id: 45, title: "স্থানীয় সরকার অর্থায়ন", text: "স্থানীয় সরকারের আর্থিক স্বায়ত্তশাসন।", dissenters: [22] },
+        { id: 46, title: "সরকারি কর্মকর্তা ন্যস্তকরণ", text: "স্থানীয় কর্মকর্তাদের স্থানীয় সরকারের অধীনে ন্যস্ত করা।", dissenters: [22] },
+        { id: 47, title: "তহবিল সংগ্রহ", text: "নিজস্ব তহবিল সংগ্রহের ক্ষমতা।", dissenters: [9, 18] },
+        { id: 48, title: "সংসদীয় বিশেষাধিকার", text: "সংসদ সদস্যদের বিশেষাধিকার ও দায় নির্ধারণী আইন।", dissenters: [13, 20, 27, 29] },
+        { id: 49, title: "আসন্ন সীমানা নির্ধারণ", text: "ত্রয়োদশ নির্বাচনের জন্য বিশেষ কমিটির মাধ্যমে সীমানা নির্ধারণ।", dissenters: [33] },
+        { id: 50, title: "বিচারক আচরণবিধি", text: "বিচারকদের জন্য আচরণবিধি প্রণয়ন।", dissenters: [] },
+        { id: 51, title: "সাবেক বিচারপতি", text: "সাবেক বিচারপতিদের আচরণবিধি ও 'বিচারপতি' পদবি ব্যবহারে কড়াকড়ি।", dissenters: [9, 18] },
+        { id: 52, title: "সুপ্রীম কোর্ট সচিবালয়", text: "পৃথক সুপ্রীম কোর্ট সচিবালয় ও নিজস্ব বাজেট।", dissenters: [] },
+        { id: 53, title: "স্বতন্ত্র তদন্ত সার্ভিস", text: "বিচার বিভাগের অধীনে স্বতন্ত্র ফৌজদারি তদন্ত সার্ভিস।", dissenters: [21, 33] },
+        { id: 54, title: "জনবল বৃদ্ধি", text: "বিচার বিভাগে বিচারক ও জনবল বৃদ্ধি।", dissenters: [] },
+        { id: 55, title: "লিগ্যাল এইড", text: "লিগ্যাল এইড সংস্থাকে অধিদপ্তরে রূপান্তর।", dissenters: [18, 27] },
+        { id: 56, title: "সম্পদ বিবরণী (বিচারক)", text: "বিচারক ও কর্মচারীদের সম্পদের হিসাব প্রকাশ।", dissenters: [4] },
+        { id: 57, title: "আদালত ডিজিটাইজেশন", text: "মামলা ব্যবস্থাপনা সংস্কার ও ডিজিটাইজেশন।", dissenters: [] },
+        { id: 58, title: "আইন সংশোধন", text: "মধ্যস্থতা (Mediation) ও অন্যান্য আইন সংস্কার।", dissenters: [] },
+        { id: 59, title: "আইনজীবী ও রাজনীতি", text: "আদালত প্রাঙ্গনে দলীয় রাজনীতি নিষিদ্ধকরণ।", dissenters: [1, 27, 28, 29] },
+        { id: 60, title: "বার কাউন্সিল নির্বাচন", text: "বার কাউন্সিলে দলীয় প্যানেল বিলোপ।", dissenters: [21, 23, 25, 27, 28, 30, 33] },
+        { id: 61, title: "বিচারকদের রাজনীতি", text: "বিচারকদের রাজনৈতিক আনুগত্য প্রদর্শন অসদাচরণ হিসেবে গণ্য।", dissenters: [] },
+        { id: 62, title: "তথ্য অধিকার", text: "রাজনৈতিক দলকে তথ্য অধিকার আইনের আওতায় আনা।", dissenters: [1, 27, 28, 33] },
+        { id: 63, title: "অফিসিয়াল সিক্রেটস", text: "১৯২৩ সালের আইন সংশোধন।", dissenters: [1, 18, 22, 27, 29] },
+        { id: 64, title: "গণহত্যা তদন্ত", text: "জুলাই গণহত্যা ও ভোট জালিয়াতিতে জড়িতদের বিরুদ্ধে তদন্ত কমিশন।", dissenters: [] },
+        { id: 65, title: "জনপ্রশাসন কমিশন", text: "স্থায়ী জনপ্রশাসন সংস্কার কমিশন গঠন।", dissenters: [27, 29] },
+        { id: 66, title: "তিনটি পিএসসি", text: "সাধারণ, শিক্ষা ও স্বাস্থ্য—তিনটি পৃথক পিএসসি গঠন।", dissenters: [1, 12, 16, 17, 21, 25, 33] },
+        { id: 67, title: "নিরীক্ষা পৃথকীকরণ", text: "হিসাব বিভাগ থেকে নিরীক্ষা বিভাগ আলাদা করা।", dissenters: [7] },
+        { id: 68, title: "নতুুন বিভাগ", text: "কুমিল্লা ও ফরিদপুর বিভাগ গঠন।", dissenters: [27] },
+        { id: 69, title: "পুলিশ কমিশন", text: "স্বাধীন পুলিশ কমিশন গঠন।", dissenters: [] },
+        { id: 70, title: "কালো টাকা", text: "বৈধ উৎসবিহীন আয় বৈধ করার সুযোগ বন্ধ।", dissenters: [33] },
+        { id: 71, title: "স্বার্থের দ্বন্দ্ব", text: "স্বার্থের দ্বন্দ্ব (Conflict of Interest) আইন প্রণয়ন।", dissenters: [] },
+        { id: 72, title: "বেনিফিশিয়াল ওনারশিপ", text: "প্রকৃত মালিকানা প্রকাশ সংক্রান্ত আইন।", dissenters: [] },
+        { id: 73, title: "নির্বাচনি অর্থায়ন", text: "নির্বাচনি ব্যয়ের স্বচ্ছতা ও হলফনামা যাচাই।", dissenters: [] },
+        { id: 74, title: "জনপ্রতিনিধিদের সম্পদ", text: "প্রতি বছর সম্পদ বিবরণী প্রকাশ বাধ্যতামূলক।", dissenters: [] },
+        { id: 75, title: "দুর্নীতিবাজ মনোনয়ন", text: "দুর্নীতিবাজদের মনোনয়ন না দেওয়া।", dissenters: [] },
+        { id: 76, title: "দুদক যোগ্যতা", text: "কমিশনার হওয়ার যোগ্যতায় ১৫ বছরের অভিজ্ঞতা।", dissenters: [4, 22] },
+        { id: 77, title: "দুদক পর্যালোচনা", text: "দুদকের কার্যক্রম পর্যালোচনার কমিটি।", dissenters: [] },
+        { id: 78, title: "ধারা ৩২ক বিলুপ্তি", text: "সরকারি কর্মচারীদের বিরুদ্ধে মামলা করতে সরকারের অনুমতি লাগবে না।", dissenters: [12, 25, 31] },
+        { id: 79, title: "আয়কর তথ্য", text: "দুদক আয়কর নথি তলব করতে পারবে (ধারা ৩০৯ সংশোধন)।", dissenters: [1, 12, 21, 25, 31, 33] },
+        { id: 80, title: "বেসরকারি দুর্নীতি", text: "বেসরকারি খাতের দুর্নীতিকে শাস্তির আওতায় আনা (UNCAC)।", dissenters: [] },
+        { id: 81, title: "আন্তর্জাতিক মান", text: "Common Reporting Standards গ্রহণ।", dissenters: [] },
+        { id: 82, title: "দুর্নীতিবিরোধী কৌশল", text: "জাতীয় দুর্নীতিবিরোধী কৌশলপত্র প্রণয়ন।", dissenters: [16] },
+        { id: 83, title: "অটোমেশন", text: "সকল সরকারি সেবা ও তথ্য অটোমেশন।", dissenters: [] },
+        { id: 84, title: "OGP সদস্যপদ", text: "Open Government Partnership-এ যোগদান।", dissenters: [1, 8, 12, 15, 28, 29] }
+    ];
+
+    const grid = document.getElementById('contentGrid');
+    const searchInput = document.getElementById('searchInput');
+    const resultCount = document.getElementById('resultCount');
+
+    function renderPoints(filterText = '') {
+        grid.innerHTML = '';
+        const lowerFilter = filterText.toLowerCase();
+
+        const filteredPoints = pointsData.filter(point => {
+            // Text Search
+            const textMatch = point.title.toLowerCase().includes(lowerFilter) || 
+                              point.text.toLowerCase().includes(lowerFilter) || 
+                              point.id.toString() === lowerFilter;
+            
+            // Party Search (Check if searched party is in the dissenters list)
+            const dissenterNames = getParties(point.dissenters).join(" ").toLowerCase();
+            const partyMatch = dissenterNames.includes(lowerFilter);
+
+            return textMatch || partyMatch;
+        });
+
+        resultCount.textContent = `${filteredPoints.length}টি প্রস্তাব প্রদর্শিত হচ্ছে`;
+
+        filteredPoints.forEach(point => {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const dissentingParties = getParties(point.dissenters);
+            
+            let oppositionHtml = '';
+            if (dissentingParties.length > 0) {
+                oppositionHtml = `
+                    <div class="opposition-box">
+                        <span class="opposition-title">ভিন্নমত / নোট অব ডিসেন্ট (${point.dissenters.length}টি দল):</span>
+                        ${dissentingParties.map(p => `<span class="party-tag">${p}</span>`).join('')}
+                    </div>
+                `;
+            } else {
+                oppositionHtml = `<div class="consensus">✔ সর্বসম্মত বা একক কোনো দ্বিমত নেই</div>`;
+            }
+
+            card.innerHTML = `
+                <div class="card-header">
+                    <h3>${point.title}</h3>
+                    <span class="point-id">প্রস্তাব ${point.id}</span>
+                </div>
+                <div class="content">
+                    <p>${point.text}</p>
+                </div>
+                ${oppositionHtml}
+            `;
+            grid.appendChild(card);
+        });
+
+        if(filteredPoints.length === 0) {
+            grid.innerHTML = `<div style="text-align:center; grid-column: 1/-1; padding: 2rem;">দুঃখিত, কোনো ফলাফল পাওয়া যায়নি।</div>`;
+        }
+    }
+
+    // Initial Render
+    renderPoints();
+
+    // Search Listener
+    searchInput.addEventListener('input', (e) => {
+        renderPoints(e.target.value);
+    });
+
+</script>
+
+</body>
+</html>

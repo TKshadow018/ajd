@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
 import { FaArrowRight, FaUsers, FaHandshake, FaChartLine } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import StatsBackground3D from '../components/StatsBackground3D';
 import './Home.css';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
+      {/* <iframe src='https://my.spline.design/100followersfocus-h5PQPIBWCiKhLvfkcjNOietj/' frameborder='0' width='100%' height='800px'></iframe> */}
       <section className="hero-section">
         <div className="hero-overlay"></div>
         <Container className="hero-content">
@@ -39,26 +41,29 @@ const Home = () => {
 
       {/* Stats Section */}
       <section className="stats-section">
-        <Container>
+        <Suspense fallback={null}>
+          <StatsBackground3D />
+        </Suspense>
+        <Container className="stats-content">
           <Row className="text-center">
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaUsers className="stat-icon" />
-                <h3 className="stat-number">50,000+</h3>
+                <h3 className="stat-number">{t('home.stats.membersCount')}</h3>
                 <p className="stat-label">{t('home.stats.members')}</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaHandshake className="stat-icon" />
-                <h3 className="stat-number">200+</h3>
+                <h3 className="stat-number">{t('home.stats.projectsCount')}</h3>
                 <p className="stat-label">{t('home.stats.projects')}</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaChartLine className="stat-icon" />
-                <h3 className="stat-number">85%</h3>
+                <h3 className="stat-number">{t('home.stats.approvalCount')}</h3>
                 <p className="stat-label">{t('home.stats.approval')}</p>
               </div>
             </Col>

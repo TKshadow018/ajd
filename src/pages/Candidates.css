@@ -1,0 +1,368 @@
+/* Candidates Page Styles */
+
+.candidates-page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Header Section */
+.candidates-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.candidates-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.candidates-header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.candidates-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.candidates-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+/* Filters Section */
+.candidates-filters-section {
+  background: white;
+  padding: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-input-group {
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+}
+
+.search-icon-wrapper {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  border: none;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #f8f9ff;
+}
+
+.seat-filter-select {
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: white;
+  color: #333;
+}
+
+.seat-filter-select:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.results-count {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.results-count strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Candidates Grid Section */
+.candidates-grid-section {
+  padding: 60px 0;
+}
+
+.candidate-col {
+  margin-bottom: 30px;
+}
+
+.candidate-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.candidate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+}
+
+/* Photo Section */
+.candidate-photo-wrapper {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.candidate-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.candidate-card:hover .candidate-photo {
+  transform: scale(1.05);
+}
+
+.seat-badge {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(102, 126, 234, 0.95);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Body */
+.candidate-body {
+  padding: 25px;
+}
+
+.candidate-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.candidate-father-name, .candidate-mother-name {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.candidate-divider {
+  margin: 15px 0;
+  border-top: 2px solid #f0f0f0;
+}
+
+/* Information Grid */
+.candidate-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.info-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.candidate-card:hover .info-item {
+  background: #f0f2ff;
+}
+
+.info-icon {
+  color: #667eea;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.info-age {
+  font-size: 0.8rem;
+  color: #667eea;
+  margin: 2px 0 0 0;
+}
+
+/* No Results */
+.no-results {
+  font-size: 1.2rem;
+  color: #999;
+  padding: 60px 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .candidates-title {
+    font-size: 2.2rem;
+  }
+
+  .candidates-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .candidate-card {
+    margin-bottom: 20px;
+  }
+
+  .candidate-photo-wrapper {
+    height: 280px;
+  }
+
+  .search-input-group,
+  .seat-filter-select {
+    font-size: 0.95rem;
+  }
+
+  .candidate-name {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .candidates-page {
+    background: white;
+  }
+
+  .candidates-header {
+    padding: 60px 0 40px;
+    margin-top: 60px;
+  }
+
+  .candidates-title {
+    font-size: 1.8rem;
+  }
+
+  .candidates-subtitle {
+    font-size: 1rem;
+  }
+
+  .candidates-filters-section {
+    padding: 30px 0;
+  }
+
+  .candidate-photo-wrapper {
+    height: 250px;
+  }
+
+  .candidate-body {
+    padding: 20px;
+  }
+
+  .info-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .info-label {
+    font-size: 0.7rem;
+  }
+
+  .info-value {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.candidate-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.candidate-col:nth-child(1) .candidate-card {
+  animation-delay: 0.1s;
+}
+
+.candidate-col:nth-child(2) .candidate-card {
+  animation-delay: 0.2s;
+}
+
+.candidate-col:nth-child(3) .candidate-card {
+  animation-delay: 0.3s;
+}
+
+/* Loading state placeholder */
+.candidate-card.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

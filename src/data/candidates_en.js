@@ -151,7 +151,7 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "/candidate/shorifa_akter.png"
+    photo: "/candidate/shorifa_akter1.png"
   },
   {
     id: 12,

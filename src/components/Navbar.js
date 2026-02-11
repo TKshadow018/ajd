@@ -121,7 +121,6 @@ const CustomNavbar = () => {
                     active={i18n.language === lang.code}
                     className="language-item"
                   >
-                    <span className="lang-flag-menu">{lang.flag}</span>
                     <span className="lang-name-menu">{lang.name}</span>
                   </Dropdown.Item>
                 ))}

@@ -1,8 +1,6 @@
 .custom-navbar {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   box-shadow: var(--shadow-medium);
-  padding: 1rem 0;
-  padding-bottom: 2rem; 
   transition: all 0.3s ease;
   position: sticky;
   top: 0;

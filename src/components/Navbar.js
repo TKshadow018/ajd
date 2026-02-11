@@ -36,7 +36,7 @@ const CustomNavbar = () => {
     }
   };
 
-  const currentLanguage = LANGUAGES.find(lang => lang.code === i18n.language) || LANGUAGES[0];
+  const currentLanguage = LANGUAGES.find(lang => lang.code === i18n.language) || LANGUAGES[1];
 
   return (
     <Navbar expanded={expanded} expand="lg" className="custom-navbar --cursor-color-1" fixed="top">

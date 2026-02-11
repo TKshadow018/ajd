@@ -201,6 +201,10 @@
 }
 
 @media (max-width: 991px) {
+  .brand-tagline {
+    display: none;
+  }
+  
   .custom-navbar .nav-link {
     margin: 0.5rem 0;
   }

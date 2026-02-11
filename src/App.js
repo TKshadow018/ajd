@@ -76,7 +76,7 @@ function Layout({ children }) {
 
   return (
     <div className="layout-wrapper">
-      <ThemeSelector />
+      {/* <ThemeSelector /> */}
       <main className='main-content'>
         {children}
       </main>

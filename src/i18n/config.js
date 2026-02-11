@@ -15,7 +15,7 @@ i18n
       bn: { translation: bn },
       local: { translation: local }
     },
-    fallbackLng: 'en',
+    fallbackLng: process.env.REACT_APP_DEFAULT_LANGUAGE || 'en',
     debug: false,
     interpolation: {
       escapeValue: false

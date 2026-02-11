@@ -11,7 +11,7 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Kousor+Azam"
+    photo: "/candidate/md_kousor_azam_hannu.png"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Syed+Parvez"
+    photo: "/candidate/md_syed_parvez.png"
   },
   {
     id: 3,
@@ -43,20 +43,6 @@ export const candidates = [
   },
   {
     id: 4,
-    name: "Md. Alauddin Akash",
-    fatherName: "Md. Abdul Malek Moharaz Mia",
-    motherName: "Reba Begum",
-    party: "Amjonotar DOl",
-    seat: "Barguna-2",
-    dob: "01-01-1976",
-    education: "Self Educated",
-    occupation: "Business",
-    candidateType: "Eligible",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Alauddin+Akash"
-  },
-  {
-    id: 5,
     name: "Md. Ala Uddin",
     fatherName: "Akbor Hossen",
     motherName: "Arfuza Katun",
@@ -67,10 +53,10 @@ export const candidates = [
     occupation: "Jobs",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Ala+Uddin"
+    photo: "/candidate/md_ala_uddin.png"
   },
   {
-    id: 6,
+    id: 5,
     name: "Md Jalal Uddin Rumi",
     fatherName: "Md Koyshar Ahmmed",
     motherName: "Jobaida Gulshanara",
@@ -81,10 +67,10 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md+Jalal+Uddin"
+    photo: "/candidate/md_jalal_uddin_rumi.png"
   },
   {
-    id: 7,
+    id: 6,
     name: "Md. Alomgir Hossen",
     fatherName: "Late Amzad Hossen",
     motherName: "Mosa. Rezia Katun",
@@ -95,24 +81,10 @@ export const candidates = [
     occupation: "Others (Service)",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Alomgir"
+    photo: "/candidate/md_alomgir_hossen.png"
   },
   {
-    id: 8,
-    name: "Md. Abul Kalam Azad",
-    fatherName: "Md. Mobarak Hossen",
-    motherName: "Rabia Katun",
-    party: "Amjonotar DOl",
-    seat: "Dhaka-4",
-    dob: "15-07-1978",
-    education: "LLM",
-    occupation: "Lawyer",
-    candidateType: "Eligible",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Abul+Kalam"
-  },
-  {
-    id: 9,
+    id: 7,
     name: "Abdullah Al Hossain",
     fatherName: "Md Mohashin Sarkar",
     motherName: "Shamima Yasmin",
@@ -126,7 +98,7 @@ export const candidates = [
     photo: "/candidate/abdullah_al_hossain.jpg"
   },
   {
-    id: 10,
+    id: 8,
     name: "Md. Tarek Rahman",
     fatherName: "Md. Abdul Latif",
     motherName: "Mosa. Shahana Begum",
@@ -140,21 +112,7 @@ export const candidates = [
     photo: "/candidate/tarek_rahman.jpg"
   },
   {
-    id: 11,
-    name: "Raju Ahmmed",
-    fatherName: "Jafor Ahmed",
-    motherName: "Khodeja Begum",
-    party: "Amjonotar DOl",
-    seat: "Dhaka-13",
-    dob: "",
-    education: "Masters",
-    occupation: "Business",
-    candidateType: "Eligible",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Raju+Ahmmed"
-  },
-  {
-    id: 12,
+    id: 9,
     name: "Md. Nilav Parvez",
     fatherName: "Md. Anower Hossain",
     motherName: "Rozina Akter",
@@ -165,10 +123,10 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Nilav+Parvez"
+    photo: "/candidate/md_nilav_parvez.png"
   },
   {
-    id: 13,
+    id: 10,
     name: "Md.Jakir Hossain",
     fatherName: "Md. Abul Hossain",
     motherName: "Monowara Begum",
@@ -179,10 +137,10 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Jakir+Hossain"
+    photo: "/candidate/md_jakir_hossain.png"
   },
   {
-    id: 14,
+    id: 11,
     name: "Shorifa Akter",
     fatherName: "F M Shirajul Haque",
     motherName: "Shiuli Begum",
@@ -196,7 +154,7 @@ export const candidates = [
     photo: "/candidate/shorifa_akter.png"
   },
   {
-    id: 15,
+    id: 12,
     name: "Chowdhury Rokibul Haq",
     fatherName: "Azharul Haq Chowdhury",
     motherName: "Saieda Khaleda Begum",
@@ -207,24 +165,10 @@ export const candidates = [
     occupation: "Business",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Chowdhury+Rokibul"
+    photo: "/candidate/chowdhury_rokibul_haq.png"
   },
   {
-    id: 16,
-    name: "Md. Masud Rana",
-    fatherName: "Late Md. Harunr Roshid",
-    motherName: "Late Amena Akter",
-    party: "Amjonotar DOl",
-    seat: "Comilla-4",
-    dob: "10-01-1986",
-    education: "Self Educated",
-    occupation: "",
-    candidateType: "Eligible",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Masud+Rana"
-  },
-  {
-    id: 17,
+    id: 13,
     name: "Md Abdullah Al Noman",
     fatherName: "Md Abdur Rashid",
     motherName: "Mosa. Suraiya Akter",
@@ -235,10 +179,10 @@ export const candidates = [
     occupation: "",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md+Abdullah+Al"
+    photo: "/candidate/md_abdullah_al_noman.png"
   },
   {
-    id: 18,
+    id: 14,
     name: "Saiful Karim Mojumdar",
     fatherName: "Late Obayed Ullah Mojumdar",
     motherName: "Late Nur Champa Begum",
@@ -249,10 +193,10 @@ export const candidates = [
     occupation: "Jobs",
     candidateType: "Eligible",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Saiful+Karim"
+    photo: "/candidate/saiful_karim_mojumdar.png"
   },
   {
-    id: 19,
+    id: 15,
     name: "Nurul Absar",
     fatherName: "Asrafujjaman",
     motherName: "Nur Ayesha",

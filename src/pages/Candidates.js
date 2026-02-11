@@ -32,7 +32,8 @@ const formatDate = (dateString) => {
   const [day, month, year] = dateString.split('-').map(Number);
   const date = new Date(year, month - 1, day);
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return date.toLocaleDateString('en-US', options);
+  const locale = i18n.language === 'bn' ? 'bn-BD' : 'en-US';
+  return date.toLocaleDateString(locale, options);
 };
 
 

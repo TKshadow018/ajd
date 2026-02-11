@@ -11,7 +11,7 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Kousor+Azam"
+    photo: "/candidate/md_kousor_azam_hannu.png"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Syed+Parvez"
+    photo: "/candidate/md_syed_parvez.png"
   },
   {
     id: 3,
@@ -43,20 +43,6 @@ export const candidates = [
   },
   {
     id: 4,
-    name: "মো. আলাউদ্দিন আকাশ",
-    fatherName: "মো. আব্দুল মালেক মোহারাজ মিয়া",
-    motherName: "রেবা বেগম",
-    party: "আমজনতার দল",
-    seat: "বরগুনা-২",
-    dob: "01-01-1976",
-    education: "স্ব-শিক্ষিত",
-    occupation: "ব্যবসা",
-    candidateType: "যোগ্য",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Alauddin+Akash"
-  },
-  {
-    id: 5,
     name: "মো. আলা উদ্দিন",
     fatherName: "আকবর হোসেন",
     motherName: "আরফুজা খাতুন",
@@ -67,10 +53,10 @@ export const candidates = [
     occupation: "চাকরি",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Ala+Uddin"
+    photo: "/candidate/md_ala_uddin.png"
   },
   {
-    id: 6,
+    id: 5,
     name: "মো জালাল উদ্দিন রুমি",
     fatherName: "মো কয়সার আহমেদ",
     motherName: "জোবায়দা গুলশানারা",
@@ -81,10 +67,10 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md+Jalal+Uddin"
+    photo: "/candidate/md_jalal_uddin_rumi.png"
   },
   {
-    id: 7,
+    id: 6,
     name: "মো. আলোমগির হোসেন",
     fatherName: "স্বর্গীয় আমজাদ হোসেন",
     motherName: "মোছাঃ রেজিয়া খাতুন",
@@ -95,24 +81,10 @@ export const candidates = [
     occupation: "অন্যান্য (সেবা)",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Alomgir"
+    photo: "/candidate/md_alomgir_hossen.png"
   },
   {
-    id: 8,
-    name: "মো. আবুল কালাম আজাদ",
-    fatherName: "মো. মোবারক হোসেন",
-    motherName: "রাবেয়া খাতুন",
-    party: "আমজনতার দল",
-    seat: "ঢাকা-৪",
-    dob: "15-07-1978",
-    education: "এলএলএম",
-    occupation: "আইনজীবী",
-    candidateType: "যোগ্য",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Abul+Kalam"
-  },
-  {
-    id: 9,
+    id: 7,
     name: "আব্দুল্লাহ আল হোসাইন",
     fatherName: "মো মোহাসিন সরকার",
     motherName: "শামিমা ইয়াসমিন",
@@ -126,7 +98,7 @@ export const candidates = [
     photo: "/candidate/abdullah_al_hossain.jpg"
   },
   {
-    id: 10,
+    id: 8,
     name: "মো. তারেক রহমান",
     fatherName: "মো. আব্দুল লতিফ",
     motherName: "মোছাঃ শাহানা বেগম",
@@ -140,21 +112,7 @@ export const candidates = [
     photo: "/candidate/tarek_rahman.jpg"
   },
   {
-    id: 11,
-    name: "রাজু আহম্মেদ",
-    fatherName: "জাফর আহমেদ",
-    motherName: "খোদেজা বেগম",
-    party: "আমজনতার দল",
-    seat: "ঢাকা-১৩",
-    dob: "",
-    education: "মাস্টার্স",
-    occupation: "ব্যবসা",
-    candidateType: "যোগ্য",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Raju+Ahmmed"
-  },
-  {
-    id: 12,
+    id: 9,
     name: "মো. নীলব পারভেজ",
     fatherName: "মো. আনোয়ার হোসাইন",
     motherName: "রোজিনা আক্তার",
@@ -165,10 +123,10 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Nilav+Parvez"
+    photo: "/candidate/md_nilav_parvez.png"
   },
   {
-    id: 13,
+    id: 10,
     name: "মো.জাকির হোসাইন",
     fatherName: "মো. আবুল হোসাইন",
     motherName: "মনোয়ারা বেগম",
@@ -179,10 +137,10 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Jakir+Hossain"
+    photo: "/candidate/md_jakir_hossain.png"
   },
   {
-    id: 14,
+    id: 11,
     name: "শরিফা আক্তার",
     fatherName: "এফ এম শিরাজুল হক",
     motherName: "শিউলি বেগম",
@@ -196,7 +154,7 @@ export const candidates = [
     photo: "/candidate/shorifa_akter.png"
   },
   {
-    id: 15,
+    id: 12,
     name: "চৌধুরী রকিবুল হাক",
     fatherName: "আজহারুল হাক চৌধুরী",
     motherName: "সৈয়দা খালেদা বেগম",
@@ -207,24 +165,10 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Chowdhury+Rokibul"
+    photo: "/candidate/chowdhury_rokibul_haq.png"
   },
   {
-    id: 16,
-    name: "মো. মাসুদ রানা",
-    fatherName: "স্বর্গীয় মো. হারুনর রশিদ",
-    motherName: "স্বর্গীয় আমেনা আক্তার",
-    party: "আমজনতার দল",
-    seat: "কুমিল্লা-৪",
-    dob: "10-01-1986",
-    education: "স্ব-শিক্ষিত",
-    occupation: "",
-    candidateType: "যোগ্য",
-    elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md.+Masud+Rana"
-  },
-  {
-    id: 17,
+    id: 13,
     name: "মো আব্দুল্লাহ আল নোমান",
     fatherName: "মো আব্দুর রশিদ",
     motherName: "মোসাঃ সুরাইয়া আক্তার",
@@ -235,10 +179,10 @@ export const candidates = [
     occupation: "",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Md+Abdullah+Al"
+    photo: "/candidate/md_abdullah_al_noman.png"
   },
   {
-    id: 18,
+    id: 14,
     name: "সাইফুল করিম মজুমদার",
     fatherName: "স্বর্গীয় উবাইদ উল্লাহ মজুমদার",
     motherName: "স্বর্গীয় নুর চাঁপা বেগম",
@@ -249,10 +193,10 @@ export const candidates = [
     occupation: "চাকরি",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "https://via.placeholder.com/300x400?text=Saiful+Karim"
+    photo: "/candidate/saiful_karim_mojumdar.png"
   },
   {
-    id: 19,
+    id: 15,
     name: "নুরুল আবসার",
     fatherName: "আসরাফুজ্জামান",
     motherName: "নূর আয়েশা",

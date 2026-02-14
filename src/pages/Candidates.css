@@ -155,8 +155,8 @@
 
 .seat-badge {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
+  top: 15px;
+  left: 15px;
   background: rgba(102, 126, 234, 0.95);
   color: white;
   padding: 8px 15px;
@@ -167,6 +167,37 @@
   align-items: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vote-badge {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  background: rgba(102, 126, 234, 0.95);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px 0 0 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  min-width: 70px;
+  text-align: center;
+  animation: slideInFromLeft 0.5s ease;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Card Body */

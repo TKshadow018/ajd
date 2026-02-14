@@ -97,7 +97,7 @@
         "bio": "The current Convenor of Aamjanata Dol is Colonel (Retd.) Mia Mashiuzzaman. He contested the first party election for the post of President and secured a landslide victory. He was elected President by receiving a total of 95 votes. His sole defeated rival was Mr. Mohammad Shoikot, who managed to receive only 3 votes. This huge margin of victory proves his strong acceptance and leadership capability within the party. He is currently leading the party as its Convenor.",
         "votes": 95,
         "opponent": "Muhammad Soikat: 3",
-        "image": "/face/mia.png"
+        "image": "/face/mia1.png"
       },
       "leader2": {
         "name": "Tarek Rahman",
@@ -105,7 +105,7 @@
         "bio": "The current General Secretary of Aamjanata Dol is Tarek Rahman. He is a well-known political figure in various popular movements across the country. He contested the first party election for General Secretary and won by a large margin. In that election, he was elected after receiving 93 votes. His sole defeated rival was Mohammad Mostofa, who received only 5 votes. He is currently managing the party's important organizational activities.",
         "votes": 93,
         "opponent": "Mohammad Mostafa: 5",
-        "image": "/face/tarek.png"
+        "image": "/face/tarek1.png"
       },
       "leader3": {
         "name": "Jonab Arif Billah",
@@ -113,7 +113,7 @@
         "bio": "Organizational Secretary of Amjonatar Dal. He was defeated in the first election for this post. In that election, Faysal Ahmed was elected as the Organizational Secretary with 60 votes. The defeated candidates were Arif Billah (who received 34 votes) and Dr. Anamul Hoque (who received 4 votes). Subsequently, when the elected Organizational Secretary Faysal Ahmed left the party, Arif Billah was appointed as the new Organizational Secretary.",
         "votes": 60,
         "opponent": "Arif Billah: 34; Dr. Anamul Huq: 4",
-        "image": "/face/arif.png"
+        "image": "/face/arif1.png"
       },
       "narayanganj": {
         "leader1": {

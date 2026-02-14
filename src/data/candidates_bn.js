@@ -11,7 +11,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_kousor_azam_hannu.png"
+    photo: "/candidate/md_kousor_azam_hannu.png",
+    voteReceived: "১৭৪"
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_syed_parvez.png"
+    photo: "/candidate/md_syed_parvez.png",
+    voteReceived: "২৯৫"
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/asadul_hoque.PNG"
+    photo: "/candidate/asadul_hoque.PNG",
+    voteReceived: "৬৫৩"
   },
   {
     id: 4,
@@ -53,7 +56,8 @@ export const candidates = [
     occupation: "চাকরি",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_ala_uddin.png"
+    photo: "/candidate/md_ala_uddin.png",
+    voteReceived: "৩৭০"
   },
   {
     id: 5,
@@ -67,7 +71,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_jalal_uddin_rumi.png"
+    photo: "/candidate/md_jalal_uddin_rumi.png",
+    voteReceived: "১৭৬"
   },
   {
     id: 6,
@@ -81,7 +86,8 @@ export const candidates = [
     occupation: "অন্যান্য (সেবা)",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_alomgir_hossen.png"
+    photo: "/candidate/md_alomgir_hossen.png",
+    voteReceived: "৩৩০"
   },
   {
     id: 7,
@@ -95,7 +101,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/abdullah_al_hossain.jpg"
+    photo: "/candidate/abdullah_al_hossain.jpg",
+    voteReceived: "২১৮"
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/tarek_rahman.jpg"
+    photo: "/candidate/tarek_rahman.jpg",
+    voteReceived: "১০৪৪"
   },
   {
     id: 9,
@@ -123,7 +131,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_nilav_parvez.png"
+    photo: "/candidate/md_nilav_parvez.png",
+    voteReceived: "৭০৫"
   },
   {
     id: 10,
@@ -137,7 +146,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_jakir_hossain.png"
+    photo: "/candidate/md_jakir_hossain.png",
+    voteReceived: "২৭৮"
   },
   {
     id: 11,
@@ -151,7 +161,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/shorifa_akter1.png"
+    photo: "/candidate/shorifa_akter1.png",
+    voteReceived: "১৮১"
   },
   {
     id: 12,
@@ -165,7 +176,8 @@ export const candidates = [
     occupation: "ব্যবসা",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/chowdhury_rokibul_haq.png"
+    photo: "/candidate/chowdhury_rokibul_haq.png",
+    voteReceived: "১১২"
   },
   {
     id: 13,
@@ -179,7 +191,8 @@ export const candidates = [
     occupation: "",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/md_abdullah_al_noman.png"
+    photo: "/candidate/md_abdullah_al_noman.png",
+    voteReceived: "১৬০"
   },
   {
     id: 14,
@@ -193,7 +206,8 @@ export const candidates = [
     occupation: "চাকরি",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/saiful_karim_mojumdar.png"
+    photo: "/candidate/saiful_karim_mojumdar.png",
+    voteReceived: "১১৬"
   },
   {
     id: 15,
@@ -207,7 +221,8 @@ export const candidates = [
     occupation: "",
     candidateType: "যোগ্য",
     elected: false,
-    photo: "/candidate/nurul_absar.PNG"
+    photo: "/candidate/nurul_absar.PNG",
+    voteReceived: "৪১৭"
   }
 ];
 

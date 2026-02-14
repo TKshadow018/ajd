@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Container, Row, Col, Card, Form, InputGroup } from 'react-bootstrap';
 import { FaSearch, FaMapMarkerAlt, FaBirthdayCake, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { convertNumberToLang } from '../utils/numberUtils';
 import getCandidates from '../data/index';
 import './Candidates.css';
 
@@ -14,15 +15,21 @@ const Candidates = () => {
   const candidates = useMemo(() => getCandidates(i18n.language), [i18n.language]);
 
   // Filter candidates based on search and seat filter
-  const filteredCandidates = candidates.filter((candidate) => {
-    const matchesSearch = 
-      candidate.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      candidate.seat.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      candidate.fatherName.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesSeat = seatFilter === '' || candidate.seat === seatFilter;
-    
-    return matchesSearch && matchesSeat;
+  const filteredCandidates = candidates
+    .filter((candidate) => {
+      const matchesSearch = 
+        candidate.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        candidate.seat.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        candidate.fatherName.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesSeat = seatFilter === '' || candidate.seat === seatFilter;
+      
+      return matchesSearch && matchesSeat;
+    })
+    .sort((a, b) => {
+    const voteA = convertNumberToLang(a.voteReceived, 'en');
+    const voteB = convertNumberToLang(b.voteReceived, 'en');
+    return parseInt(voteB) - parseInt(voteA);
   });
 
   // Get unique seats for filter dropdown
@@ -47,6 +54,13 @@ const calculateAge = (dob) => {
     age--;
   }
   return age;
+};
+
+const getVoteDisplay = (votes) => {
+  let voteText = i18n.language === 'bn' ? 'প্রাপ্ত ভোট: ' : 'Votes Received: ';
+  let voteCount = votes;
+  if (votes === 0) { voteCount = i18n.language === 'bn' ? 'অজানা' : 'Unknown'; }
+  return voteText + voteCount.toString()
 };
 
   return (
@@ -131,10 +145,12 @@ const calculateAge = (dob) => {
                         alt={candidate.name}
                         className="candidate-photo"
                       />
+                      <div className="vote-badge">
+                        {getVoteDisplay(candidate.voteReceived)}
+                      </div>
                       <div className="seat-badge">
                         <FaMapMarkerAlt className="me-1" />
                         {candidate.seat}
-                        {console.log(candidate.candidateType,"||")}
                         {(candidate.candidateType !== "Eligible" && candidate.candidateType !=="যোগ্য") && (
                           <span className="election-status not-elected ms-2">(Decleared Non Eligible)</span>
                         )}

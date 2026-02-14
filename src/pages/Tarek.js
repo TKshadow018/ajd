@@ -256,7 +256,7 @@ function Tarek() {
                 <img
                   src="/profile-butterfly.jpg"
                   alt="মোঃ তারেক রহমান - প্রজাপতি প্রতীক"
-                  onError={e => { e.target.onerror = null; e.target.src = './face/tarek.png'; }}
+                  onError={e => { e.target.onerror = null; e.target.src = './face/tarek1.png'; }}
                 />
               </div>
               <div className="butterfly-badge">প্রজাপতি প্রতীক</div>

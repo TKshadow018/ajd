@@ -161,16 +161,9 @@ const Profile = () => {
             {/* Left Column - Notices, Discussions, Events (66%) */}
             <Col lg={8} md={12} className="mb-4">
               <Card className="profile-section-card">
-                <Card.Header className="profile-section-header">
-                  <Tabs defaultActiveKey="notices" id="profile-tabs" className="mb-0 profile-tabs-theme">
-                    <Tab eventKey="notices" title={<span><i className="bi bi-megaphone me-2"></i>{t('profile.notices.title') || 'Notices'}</span>} />
-                    <Tab eventKey="discussions" title={<span><i className="bi bi-chat-dots me-2"></i>{t('profile.discussions.title') || 'Discussions'}</span>} />
-                    <Tab eventKey="events" title={<span><i className="bi bi-calendar-event me-2"></i>{t('profile.events.title') || 'Events'}</span>} />
-                  </Tabs>
-                </Card.Header>
                 <Card.Body style={{ minHeight: 320 }}>
-                  <Tabs defaultActiveKey="notices" id="profile-content-tabs" className="d-none">
-                    <Tab eventKey="notices">
+                  <Tabs defaultActiveKey="notices" id="profile-tabs" className="mb-3 profile-tabs-theme">
+                    <Tab eventKey="notices" title={<span><i className="bi bi-megaphone me-2"></i>{t('profile.notices.title') || 'Notices'}</span>}>
                       <div className="notice-item">
                         <div className="notice-badge">
                           <Badge bg="danger">{t('profile.notices.important') || 'Important'}</Badge>
@@ -193,28 +186,26 @@ const Profile = () => {
                         <small className="text-muted">Jan 15, 2026</small>
                       </div>
                     </Tab>
-                    <Tab eventKey="discussions">
-                      <div className="discussion-item">
-                        <div className="d-flex align-items-start gap-3">
-                          <div className="discussion-avatar">
-                            <i className="bi bi-person-circle"></i>
+                    <Tab eventKey="discussions" title={<span><i className="bi bi-chat-dots me-2"></i>{t('profile.discussions.title') || 'Discussions'}</span>}>
+                      <div className="discussion-item d-flex align-items-start gap-3">
+                        <div className="discussion-avatar">
+                          <i className="bi bi-person-circle"></i>
+                        </div>
+                        <div className="flex-grow-1">
+                          <div className="d-flex justify-content-between align-items-center mb-1">
+                            <strong>{t('profile.discussions.sample1.author') || 'Community Team'}</strong>
+                            <small className="text-muted">2 hours ago</small>
                           </div>
-                          <div className="flex-grow-1">
-                            <div className="d-flex justify-content-between align-items-center mb-1">
-                              <strong>{t('profile.discussions.sample1.author') || 'Community Team'}</strong>
-                              <small className="text-muted">2 hours ago</small>
-                            </div>
-                            <p className="mb-2">
-                              {t('profile.discussions.sample1.content') || 'What initiatives would you like to see in your local area? Share your thoughts!'}
-                            </p>
-                            <div className="discussion-actions">
-                              <Button variant="link" size="sm" className="p-0 me-3">
-                                <i className="bi bi-hand-thumbs-up me-1"></i> 12
-                              </Button>
-                              <Button variant="link" size="sm" className="p-0">
-                                <i className="bi bi-reply me-1"></i> {t('profile.discussions.reply') || 'Reply'}
-                              </Button>
-                            </div>
+                          <p className="mb-2">
+                            {t('profile.discussions.sample1.content') || 'What initiatives would you like to see in your local area? Share your thoughts!'}
+                          </p>
+                          <div className="discussion-actions">
+                            <Button variant="link" size="sm" className="p-0 me-3">
+                              <i className="bi bi-hand-thumbs-up me-1"></i> 12
+                            </Button>
+                            <Button variant="link" size="sm" className="p-0">
+                              <i className="bi bi-reply me-1"></i> {t('profile.discussions.reply') || 'Reply'}
+                            </Button>
                           </div>
                         </div>
                       </div>
@@ -226,7 +217,7 @@ const Profile = () => {
                         </Button>
                       </div>
                     </Tab>
-                    <Tab eventKey="events">
+                    <Tab eventKey="events" title={<span><i className="bi bi-calendar-event me-2"></i>{t('profile.events.title') || 'Events'}</span>}>
                       <div className="event-item d-flex gap-3 mb-3">
                         <div className="event-date-box">
                           <span className="event-day">25</span>

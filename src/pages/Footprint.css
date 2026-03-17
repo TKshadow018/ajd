@@ -1,0 +1,514 @@
+/* Footprint Page Styles */
+.fancy {
+  --b: 6px;   /* control the border thickness */
+  --w: 30vw;  /* control the width of the line*/
+  --g: 15px;  /* control the gap */
+  --c: #ffffff;
+ 
+  width: fit-content;
+  padding: .25em 1em;
+  line-height: 1.6em;
+  color: var(--primary-color);
+  background: 
+    conic-gradient(from   45deg at left ,var(--c) 25%,#0000 0) 0,
+    conic-gradient(from -135deg at right,var(--c) 25%,#0000 0) 100%;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+  border-image: 
+     linear-gradient(
+       #0000      calc(50% - var(--b)/2),
+       var(--c) 0 calc(50% + var(--b)/2),
+       #0000    0) 
+    1/0 var(--w)/calc(var(--w) + var(--g));
+  margin-inline: auto;
+}
+
+
+.footprint-page {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Header Section */
+.footprint-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.footprint-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.footprint-header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.footprint-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.footprint-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+/* Content Section */
+.footprint-content {
+  padding: 60px 0;
+  position: relative;
+}
+
+.map-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.map-container {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+
+.bangladesh-map {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  cursor: pointer;
+}
+
+.districts-group {
+  user-select: none;
+}
+
+.district-label {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  fill: #667eea;
+  transition: all 0.3s ease;
+}
+
+.district-label:hover {
+  fill: #764ba2;
+  font-weight: 700;
+  font-size: 13px;
+  filter: brightness(1.2);
+}
+
+.map-instruction {
+  margin-top: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Data Section */
+.data-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 900px;
+}
+
+.district-info-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.district-info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(102, 126, 234, 0.22);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.district-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+  padding: 28px 30px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.district-header::before {
+  content: '';
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 65%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.district-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes iconPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.district-name {
+  font-size: 2.35rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.district-id {
+  margin: 8px 0 0 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.district-body {
+  padding: 30px;
+  background: #f8f9ff;
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(102, 126, 234, 0.5) transparent;
+}
+
+.district-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.district-body::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.45);
+  border-radius: 8px;
+}
+
+.district-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+/* Description Section */
+.description-section {
+  margin-bottom: 30px;
+}
+
+.description-text {
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.stat-card {
+  padding: 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(31, 37, 89, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid rgba(118, 75, 162, 0.15);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px rgba(31, 37, 89, 0.14);
+  border-color: rgba(118, 75, 162, 0.45);
+}
+
+.stat-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.stat-icon.members {
+  color: #667eea;
+}
+
+.stat-icon.projects {
+  color: #764ba2;
+}
+
+.stat-icon.volunteers {
+  color: #f5576c;
+}
+
+.stat-content {
+  flex: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1f2450;
+  margin: 0;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #7b7f9f;
+  margin: 6px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+/* Activities Section */
+.activities-section {
+  margin-bottom: 20px;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-item {
+  background: white;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.activity-item:hover {
+  background: #f0f2ff;
+  transform: translateX(5px);
+  border-left-color: #764ba2;
+}
+
+.activity-bullet {
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.activity-text {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Footer Info */
+.info-footer {
+  background: #f0f2ff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  margin-top: 20px;
+}
+
+.small-text {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Districts List Section */
+.districts-list-section {
+  background: white;
+  padding: 60px 0;
+  border-top: 2px solid rgba(102, 126, 234, 0.1);
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.district-btn {
+  width: 100%;
+  padding: 12px 8px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.district-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+  background: #f8f9ff;
+  transform: translateY(-2px);
+}
+
+.district-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footprint-title {
+    font-size: 2rem;
+  }
+
+  .footprint-subtitle {
+    font-size: 1rem;
+  }
+
+  .map-container {
+    height: 420px;
+  }
+
+  .data-section {
+    height: 420px;
+  }
+
+  .district-name {
+    font-size: 1.8rem;
+  }
+
+  .district-body {
+    padding: 20px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .district-btn {
+    font-size: 0.75rem;
+    padding: 10px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footprint-header {
+    padding: 30px;
+  }
+
+  .footprint-page {
+    padding-top: 60px;
+  }
+
+  .district-name {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .activity-item {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}

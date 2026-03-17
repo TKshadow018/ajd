@@ -11,7 +11,14 @@
     "language": "Language",
     "vote": "Vote",
     "dashboard": "Statistics",
-    "candidates": "Candidates"
+    "candidates": "Candidates",
+    "footprint": "Our Footprint",
+    "activity": "Our Activity"
+  },
+  "activity": {
+    "title": "Our Activity",
+    "subtitle": "Highlights from our movement, programs, and community service.",
+    "photoAlt": "Activity photo"
   },
   "home": {
     "hero": {

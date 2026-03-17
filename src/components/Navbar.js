@@ -105,11 +105,25 @@ const CustomNavbar = () => {
             >
               {t('nav.candidates') || 'Candidates'}
             </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/footprint"
+              className={isActive('/footprint') ? 'active' : ''}
+              onClick={() => setExpanded(false)}
+            >
+              {t('nav.footprint') || 'Our Footprint'}
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/activity"
+              className={isActive('/activity') ? 'active' : ''}
+              onClick={() => setExpanded(false)}
+            >
+              {t('nav.activity') || 'Our Activity'}
+            </Nav.Link>
             
             <Dropdown className="language-dropdown ms-lg-2">
               <Dropdown.Toggle variant="outline-light" className="language-toggle">
-                <FaGlobe className="me-2" />
-                <span className="lang-flag">{currentLanguage.flag}</span>
                 <span className="lang-name d-none d-md-inline ms-2">{currentLanguage.name}</span>
               </Dropdown.Toggle>
 

@@ -140,6 +140,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 .stats-content {
@@ -165,7 +166,7 @@
 }
 
 .stat-icon {
-  font-size: 3.5rem;
+  font-size: 5rem !important;
   color: #ffd700;
   margin-bottom: 1rem;
   filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
@@ -319,6 +320,8 @@
   font-size: 1.1rem;
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+  position: relative;
+  z-index: 2;
 }
 
 .cta-btn:hover {

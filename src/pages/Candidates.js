@@ -68,7 +68,7 @@ const getVoteDisplay = (votes) => {
       {/* Header Section */}
       <section className="candidates-header">
         <Container>
-          <Row className="align-items-center min-vh-50">
+          <Row className="align-items-center">
             <Col lg={10} className="mx-auto text-center">
               <h1 className="candidates-title">
                 {t('candidates.title') || '2026 Election Candidates'}

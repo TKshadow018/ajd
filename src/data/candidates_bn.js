@@ -177,7 +177,7 @@ export const candidates = [
     candidateType: "যোগ্য",
     elected: false,
     photo: "/candidate/chowdhury_rokibul_haq.png",
-    voteReceived: "১১২"
+    voteReceived: "২৪৪"
   },
   {
     id: 13,
@@ -192,7 +192,7 @@ export const candidates = [
     candidateType: "যোগ্য",
     elected: false,
     photo: "/candidate/md_abdullah_al_noman.png",
-    voteReceived: "১৬০"
+    voteReceived: "৩৭৩"
   },
   {
     id: 14,
@@ -222,7 +222,7 @@ export const candidates = [
     candidateType: "যোগ্য",
     elected: false,
     photo: "/candidate/nurul_absar.PNG",
-    voteReceived: "৪১৭"
+    voteReceived: "৩৬৭"
   }
 ];
 

@@ -105,6 +105,8 @@ function App() {
                   <Route path="/vote" element={<MainContainer page="vote" />} />
                   <Route path="/dashboard" element={<MainContainer page="dashboard" />} />
                   <Route path="/candidates" element={<MainContainer page="candidates" />} />
+                  <Route path="/footprint" element={<MainContainer page="footprint" />} />
+                  <Route path="/activity" element={<MainContainer page="activity" />} />
                   <Route path="/tarek" element={<MainContainer page="tarek" />} />
                 </Routes>
               </Layout>

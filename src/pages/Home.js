@@ -1,13 +1,22 @@
-import React, { Suspense } from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import { FaArrowRight, FaUsers, FaHandshake, FaChartLine } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
-import StatsBackground3D from '../components/StatsBackground3D';
-import './Home.css';
+import React, { Suspense } from "react";
+import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import {
+  FaArrowRight,
+  FaUsers,
+  FaHandshake,
+  FaChartLine,
+} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import StatsBackground3D from "../components/StatsBackground3D";
+import "./Home.css";
 
 const Home = () => {
   const { t } = useTranslation();
-  
+  const { isAuthenticated } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -18,20 +27,31 @@ const Home = () => {
           <Row className="align-items-center min-vh-100">
             <Col lg={8} className="text-white">
               <h1 className="hero-title animate-fade-in">
-                {t('home.hero.title')}
+                {t("home.hero.title")}
               </h1>
               <h2 className="hero-subtitle animate-fade-in-delay">
-                {t('home.hero.subtitle')}
+                {t("home.hero.subtitle")}
               </h2>
               <p className="hero-description animate-fade-in-delay-2">
-                {t('home.hero.description')}
+                {t("home.hero.description")}
               </p>
               <div className="hero-buttons animate-fade-in-delay-3">
-                <Button variant="warning" size="lg" className="me-3 hero-btn-primary">
-                  {t('home.hero.joinMovement')} <FaArrowRight className="ms-2" />
+                <Button
+                  variant="warning"
+                  size="lg"
+                  className="me-3 hero-btn-primary"
+                  onClick={() => navigate("/join")}
+                >
+                  {t("home.hero.joinMovement")}{" "}
+                  <FaArrowRight className="ms-2" />
                 </Button>
-                <Button variant="outline-light" size="lg" className="hero-btn-secondary">
-                  {t('home.hero.learnMore')}
+                <Button
+                  variant="outline-light"
+                  size="lg"
+                  className="hero-btn-secondary"
+                  onClick={() => navigate("/about")}
+                >
+                  {t("home.hero.learnMore")}
                 </Button>
               </div>
             </Col>
@@ -49,22 +69,22 @@ const Home = () => {
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaUsers className="stat-icon" />
-                <h3 className="stat-number">{t('home.stats.membersCount')}</h3>
-                <p className="stat-label">{t('home.stats.members')}</p>
+                <h3 className="stat-number">{t("home.stats.membersCount")}</h3>
+                <p className="stat-label">{t("home.stats.members")}</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaHandshake className="stat-icon" />
-                <h3 className="stat-number">{t('home.stats.projectsCount')}</h3>
-                <p className="stat-label">{t('home.stats.projects')}</p>
+                <h3 className="stat-number">{t("home.stats.projectsCount")}</h3>
+                <p className="stat-label">{t("home.stats.projects")}</p>
               </div>
             </Col>
             <Col md={4} className="mb-4">
               <div className="stat-card">
                 <FaChartLine className="stat-icon" />
-                <h3 className="stat-number">{t('home.stats.approvalCount')}</h3>
-                <p className="stat-label">{t('home.stats.approval')}</p>
+                <h3 className="stat-number">{t("home.stats.approvalCount")}</h3>
+                <p className="stat-label">{t("home.stats.approval")}</p>
               </div>
             </Col>
           </Row>
@@ -76,19 +96,19 @@ const Home = () => {
         <Container>
           <Row className="align-items-center">
             <Col lg={6} className="mb-4">
-              <h2 className="section-title">{t('home.vision.title')}</h2>
+              <h2 className="section-title">{t("home.vision.title")}</h2>
               <p className="section-description">
-                {t('home.vision.description')}
+                {t("home.vision.description")}
               </p>
               <ul className="vision-list">
-                <li>{t('home.vision.point1')}</li>
-                <li>{t('home.vision.point2')}</li>
-                <li>{t('home.vision.point3')}</li>
-                <li>{t('home.vision.point4')}</li>
-                <li>{t('home.vision.point5')}</li>
+                <li>{t("home.vision.point1")}</li>
+                <li>{t("home.vision.point2")}</li>
+                <li>{t("home.vision.point3")}</li>
+                <li>{t("home.vision.point4")}</li>
+                <li>{t("home.vision.point5")}</li>
               </ul>
               <Button variant="primary" size="lg" className="mt-3">
-                {t('home.vision.readVision')}
+                {t("home.vision.readVision")}
               </Button>
             </Col>
             <Col lg={6}>
@@ -106,41 +126,43 @@ const Home = () => {
       {/* Latest Updates */}
       <section className="updates-section">
         <Container>
-          <h2 className="section-title text-center mb-5">{t('home.updates.title')}</h2>
+          <h2 className="section-title text-center mb-5">
+            {t("home.updates.title")}
+          </h2>
           <Row>
             <Col md={4} className="mb-4">
               <Card className="update-card">
                 <Card.Body>
-                  <div className="update-date">{t('home.updates.date1')}</div>
-                  <Card.Title>{t('home.updates.title1')}</Card.Title>
-                  <Card.Text>
-                    {t('home.updates.desc1')}
-                  </Card.Text>
-                  <Button variant="link" className="p-0">{t('home.updates.readMore')} <FaArrowRight /></Button>
+                  <div className="update-date">{t("home.updates.date1")}</div>
+                  <Card.Title>{t("home.updates.title1")}</Card.Title>
+                  <Card.Text>{t("home.updates.desc1")}</Card.Text>
+                  <Button variant="link" className="p-0">
+                    {t("home.updates.readMore")} <FaArrowRight />
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4} className="mb-4">
               <Card className="update-card">
                 <Card.Body>
-                  <div className="update-date">{t('home.updates.date2')}</div>
-                  <Card.Title>{t('home.updates.title2')}</Card.Title>
-                  <Card.Text>
-                    {t('home.updates.desc2')}
-                  </Card.Text>
-                  <Button variant="link" className="p-0">{t('home.updates.readMore')} <FaArrowRight /></Button>
+                  <div className="update-date">{t("home.updates.date2")}</div>
+                  <Card.Title>{t("home.updates.title2")}</Card.Title>
+                  <Card.Text>{t("home.updates.desc2")}</Card.Text>
+                  <Button variant="link" className="p-0">
+                    {t("home.updates.readMore")} <FaArrowRight />
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4} className="mb-4">
               <Card className="update-card">
                 <Card.Body>
-                  <div className="update-date">{t('home.updates.date3')}</div>
-                  <Card.Title>{t('home.updates.title3')}</Card.Title>
-                  <Card.Text>
-                    {t('home.updates.desc3')}
-                  </Card.Text>
-                  <Button variant="link" className="p-0">{t('home.updates.readMore')} <FaArrowRight /></Button>
+                  <div className="update-date">{t("home.updates.date3")}</div>
+                  <Card.Title>{t("home.updates.title3")}</Card.Title>
+                  <Card.Text>{t("home.updates.desc3")}</Card.Text>
+                  <Button variant="link" className="p-0">
+                    {t("home.updates.readMore")} <FaArrowRight />
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -149,21 +171,27 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
-        <Container>
-          <Row className="text-center">
-            <Col>
-              <h2 className="cta-title">{t('home.cta.title')}</h2>
-              <p className="cta-description">
-                {t('home.cta.description')}
-              </p>
-              <Button variant="warning" size="lg" className="cta-btn">
-                {t('home.cta.button')}
-              </Button>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      {!isAuthenticated && (
+        <section className="cta-section">
+          <Container>
+            <Row className="text-center">
+              <Col>
+                <h2 className="cta-title">{t("home.cta.title")}</h2>
+                <p className="cta-description">{t("home.cta.description")}</p>
+                <Button
+                  variant="warning"
+                  size="lg"
+                  className="cta-btn"
+                  onClick={() => navigate("/join")}
+                >
+                  <FaUsers className="btn-icon" />
+                  {t("home.cta.button")}
+                </Button>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      )}
     </div>
   );
 };

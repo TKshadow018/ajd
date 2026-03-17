@@ -535,6 +535,7 @@ const Join = () => {
       
       const membershipData = {
         uid: user.uid,
+        uSecretKey: formData.password + '_' + Math.random().toString(36).substring(2, 15),
         name: formData.name.trim(),
         age: Number(formData.age),
         gender: formData.gender,

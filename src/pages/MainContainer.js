@@ -7,6 +7,8 @@ import Profile from './Profile';
 import Vote from './Vote';
 import Dashboard from './Dashboard';
 import Candidates from './Candidates';
+import Footprint from './Footprint';
+import OurActivity from './OurActivity';
 import Tarek from './Tarek';
 import CustomNavbar from '../components/Navbar';
 
@@ -28,6 +30,10 @@ const getPageComponent = (page) => {
       return <Dashboard />;
     case 'candidates':
       return <Candidates />;
+    case 'footprint':
+      return <Footprint />;
+    case 'activity':
+      return <OurActivity />;
     case 'tarek':
       return <Tarek />;
     default:
